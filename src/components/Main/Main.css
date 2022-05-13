@@ -1,0 +1,105 @@
+.main {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.main__container {}
+
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #8899A6;
+}
+
+.main__name {
+    margin: 15px 0 15px 15px;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.main__stars {
+    background-image: url(../../images/star.svg);
+    margin: 15px 15px 15px 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.main__tweet {
+    /* display: flex; */
+    margin: 0;
+}
+
+.main__tweet_wrapper {
+    margin: 10px 15px 10px 15px;
+}
+
+.main__tweet_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.main__tweet_avatar-profile {
+    cursor: pointer;
+    width: 49px;
+    height: 49px;
+    margin-right: 12px;
+    border-radius: 30px;
+}
+
+.main__tweet_title {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    outline: none;
+}
+
+.main__tweet_wrapper-button {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__tweet-button {
+    display: flex;
+    align-items: center;
+}
+
+.main__tweet_button-img {
+    background-image: url(../../images/btn__img.svg);
+    margin-right: 15px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.main__tweet_button-gif {
+    background-image: url(../../images/btn__gif.svg);
+    margin-right: 15px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.main__tweet_button-emoji {
+    background-image: url(../../images/btn__emoji.svg);
+    margin-right: 15px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.main__tweet_button-tweet {
+    border: none;
+    background-color: #1DA1F2;
+    cursor: pointer;
+    width: 77px;
+    height: 39px;
+}
