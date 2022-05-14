@@ -8,12 +8,12 @@
 .main__header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px solid #8899A6;
+    border: 0.5px solid #EBEEF0;
 }
 
 .main__name {
     margin: 15px 0 15px 15px;
-    color: #ffffff;
+    color: #0F1419;
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
@@ -29,7 +29,7 @@
 }
 
 .main__tweet {
-    /* display: flex; */
+    border: 0.5px solid #EBEEF0;
     margin: 0;
 }
 
@@ -52,17 +52,23 @@
 
 .main__tweet_title {
     border: none;
-    background-color: rgba(255, 255, 255, 0);
-    margin: 0;
+    padding-top: 10px;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     outline: none;
+    resize: none;
+    width: 100%;
+    
+}
+
+.main__tweet_title::-webkit-scrollbar {
+    width: 0;
 }
 
 .main__tweet_wrapper-button {
-    margin: 0;
+    margin: 31px 0 0 0;
     display: flex;
     justify-content: space-between;
 }
@@ -70,6 +76,7 @@
 .main__tweet-button {
     display: flex;
     align-items: center;
+    margin-left: 60px;
 }
 
 .main__tweet_button-img {
@@ -102,4 +109,20 @@
     cursor: pointer;
     width: 77px;
     height: 39px;
+    border-radius: 100px;
+}
+
+.main__tweet_text {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.main__bar {
+    margin: 0;
+    width: 598px;
+    height: 10px;
+    background-color: #F7F9FA;
+    border: 0.5px solid #EBEEF0;
 }
