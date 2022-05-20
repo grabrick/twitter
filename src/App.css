@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
 .page {
   font-family: 'Inter', sans-serif;
+  display: grid;
+  grid-template-columns: 270px auto 350px;
+  justify-content: center;
 }
 
 .container {
-  min-width: 1440px;
   min-height: 900px;
   background-color: #ffffff;
 }

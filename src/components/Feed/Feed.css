@@ -1,17 +1,17 @@
-.main {
-    width: 600px;
-    margin: 0 auto;
+.feed {
+    height: 900px;
+    border-left: 0.5px solid #EBEEF0;
+    border-right: 0.5px solid #EBEEF0;
 }
 
-.main__container {}
-
-.main__header {
+.feed__header {
     display: flex;
     justify-content: space-between;
-    border: 0.5px solid #EBEEF0;
+    border-top: 0.5px solid #EBEEF0;
+    border-bottom: 0.5px solid #EBEEF0;
 }
 
-.main__name {
+.feed__name {
     margin: 15px 0 15px 15px;
     color: #0F1419;
     font-style: normal;
@@ -20,29 +20,27 @@
     line-height: 23px;
 }
 
-.main__stars {
+.feed__stars {
     background-image: url(../../images/star.svg);
     margin: 15px 15px 15px 0;
     width: 24px;
-    height: 24px;
+    height: 20px;
     cursor: pointer;
 }
 
-.main__tweet {
-    border: 0.5px solid #EBEEF0;
+.feed__tweet {
     margin: 0;
 }
 
-.main__tweet_wrapper {
+.feed__tweet_wrapper {
     margin: 10px 15px 10px 15px;
 }
 
-.main__tweet_wrap {
+.feed__tweet_wrap {
     display: flex;
-    align-items: center;
 }
 
-.main__tweet_avatar-profile {
+.feed__tweet_avatar-profile {
     cursor: pointer;
     width: 49px;
     height: 49px;
@@ -50,7 +48,7 @@
     border-radius: 30px;
 }
 
-.main__tweet_title {
+.feed__tweet_title {
     border: none;
     padding-top: 10px;
     font-style: normal;
@@ -60,26 +58,25 @@
     outline: none;
     resize: none;
     width: 100%;
-    
 }
 
-.main__tweet_title::-webkit-scrollbar {
+.feed__tweet_title::-webkit-scrollbar {
     width: 0;
 }
 
-.main__tweet_wrapper-button {
+.feed__tweet_wrapper-button {
     margin: 31px 0 0 0;
     display: flex;
     justify-content: space-between;
 }
 
-.main__tweet-button {
+.feed__tweet-button {
     display: flex;
     align-items: center;
     margin-left: 60px;
 }
 
-.main__tweet_button-img {
+.feed__tweet_button-img {
     background-image: url(../../images/btn__img.svg);
     margin-right: 15px;
     cursor: pointer;
@@ -87,7 +84,7 @@
     height: 24px;
 }
 
-.main__tweet_button-gif {
+.feed__tweet_button-gif {
     background-image: url(../../images/btn__gif.svg);
     margin-right: 15px;
     cursor: pointer;
@@ -95,7 +92,7 @@
     height: 24px;
 }
 
-.main__tweet_button-emoji {
+.feed__tweet_button-emoji {
     background-image: url(../../images/btn__emoji.svg);
     margin-right: 15px;
     cursor: pointer;
@@ -103,7 +100,7 @@
     height: 24px;
 }
 
-.main__tweet_button-tweet {
+.feed__tweet_button-tweet {
     border: none;
     background-color: #1DA1F2;
     cursor: pointer;
@@ -112,14 +109,14 @@
     border-radius: 100px;
 }
 
-.main__tweet_text {
+.feed__tweet_text {
     color: #ffffff;
     font-weight: 700;
     font-size: 15px;
     line-height: 19px;
 }
 
-.main__bar {
+.feed__bar {
     margin: 0;
     width: 598px;
     height: 10px;
