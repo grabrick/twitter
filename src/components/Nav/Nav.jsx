@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../images/nav__logo.svg";
 import "./Nav.css";
 
@@ -12,17 +13,17 @@ function Nav() {
         <ul>
           <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-home" />
-            <li className="Nav__catalog_link">Home</li>
+            <NavLink to="/Home"><li className="Nav__catalog_link">Home</li></NavLink>
           </div>
 
-          <div className="Nav__catalog_btn">
+          {/* <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-messages" />
             <li className="Nav__catalog_link">Messages</li>
-          </div>
+          </div> */}
 
           <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-profile" />
-            <li className="Nav__catalog_link">Profile</li>
+            <NavLink to="/Profile"><li className="Nav__catalog_link">Profile</li></NavLink>
           </div>
         </ul>
       </div>

@@ -1,6 +1,5 @@
-import Home from './components/Home/Home';
-// import Nav from './components/Nav/Nav';
-// import News from './components/News/News';
+import FeedHome from './components/element/FeedHome/FeedHome';
+import FeedProfile from './components/element/FeedProfile/FeedProfile';
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
 import './App.css';
@@ -9,7 +8,8 @@ function App() {
   return (
     <div className="page">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<FeedHome />} />
+        <Route path='/Profile' element={<FeedProfile />} />
       </Routes>
     </div>
   );

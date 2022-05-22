@@ -11,3 +11,7 @@
   min-height: 900px;
   background-color: #ffffff;
 }
+
+p {
+  margin: 0;
+}

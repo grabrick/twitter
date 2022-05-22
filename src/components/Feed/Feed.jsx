@@ -1,8 +1,6 @@
 import React from 'react';
 import './Feed.css'
 import profile from '../../images/profile.svg'
-// import Nav from '../Nav/Nav'
-// import News from '../News/News'
 
 
 

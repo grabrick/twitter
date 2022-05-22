@@ -1,12 +1,12 @@
 import React from "react";
 import '../News/News.css'
-import loops from '../../images/loops.svg'
+import loupe from '../../images/loops.svg'
 
 function News() {
     return(
         <section className="News">
             <div className="News__search-bar">
-                <img src={loops} alt="loops" className="News__img" />
+                <img src={loupe} alt="loupe" className="News__img" />
                 <input type="text" className="News__search" placeholder="Search Twitter" required />
             </div>
             <div className="News__popular-info">
