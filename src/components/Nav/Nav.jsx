@@ -13,7 +13,7 @@ function Nav() {
         <ul>
           <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-home" />
-            <NavLink to="/Home"><li className="Nav__catalog_link">Home</li></NavLink>
+            <NavLink to="/" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Home</li></NavLink>
           </div>
 
           {/* <div className="Nav__catalog_btn">
@@ -23,7 +23,7 @@ function Nav() {
 
           <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-profile" />
-            <NavLink to="/Profile"><li className="Nav__catalog_link">Profile</li></NavLink>
+            <NavLink to="/Profile" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Profile</li></NavLink>
           </div>
         </ul>
       </div>

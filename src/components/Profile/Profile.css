@@ -4,6 +4,10 @@
     border-right: 0.5px solid #EBEEF0;
 }
 
+.profile__main_info {
+    padding-bottom: 15px;
+}
+
 .profile__header {
     display: flex;
     align-items: center;
@@ -37,6 +41,11 @@
     justify-content: space-between;
     align-items: flex-end;
     height: 50px;
+}
+
+.profile__main_intro {
+    width: 600px;
+    object-fit: cover;
 }
 
 .profile__main_logo {
@@ -157,4 +166,41 @@
 
 .profile__main_element2 {
     margin-bottom: 10px;
+}
+
+.profile__main-btn_tweets {
+    display: flex;
+    width: 600px;
+    border-bottom: 0.5px solid #EBEEF0;
+}
+
+.profile__main-btn_tweet {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 52px;
+}
+
+.profile__main-btn_tweet:nth-child(2) {
+    width: 200px;
+}
+
+.profile__main-btn_tweet:hover {
+    background-color: #ececec;
+    transition: linear 0.3s;
+}
+
+.profile__main-btn_tweet:hover {
+    transition: linear 0.01s;
+    border-bottom: 2px solid #1DA1F2;
+}
+
+.profile__main-btn_text {
+    color: #5B7083;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }

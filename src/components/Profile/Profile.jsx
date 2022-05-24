@@ -43,6 +43,25 @@ function Profile() {
                 </div>
               </div>
             </div>
+
+            <div className="profile__main-btn_tweets">
+              <div className="profile__main-btn_tweet">
+                <p className="profile__main-btn_text">Tweets</p>
+              </div>
+
+              <div className="profile__main-btn_tweet">
+                <p className="profile__main-btn_text">Tweets & replies</p>
+              </div>
+
+              <div className="profile__main-btn_tweet">
+                <p className="profile__main-btn_text">Media</p>
+              </div>
+
+              <div className="profile__main-btn_tweet">
+                <p className="profile__main-btn_text">Likes</p>
+              </div>
+            </div>
+
           </div>
         </div>
     </section>

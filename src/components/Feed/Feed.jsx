@@ -1,7 +1,7 @@
 import React from 'react';
 import './Feed.css'
 import profile from '../../images/profile.svg'
-
+import Tweet from '../Tweet/Tweet';
 
 
 function Feed() {
@@ -32,6 +32,8 @@ function Feed() {
         </div>
         <div className="feed__bar"></div>
       </div>
+
+      <Tweet />
     </section>
   );
 }

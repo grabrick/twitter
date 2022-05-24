@@ -21,11 +21,16 @@
 
 .Nav__catalog_link {
     color: #0F1419;
+    /* width: 200px; */
     font-style: normal;
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
     list-style: none;
+}
+
+.Nav__catalog-link_swipe {
+    text-decoration: none;
 }
 
 .Nav__catalog_btn {
