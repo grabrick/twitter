@@ -66,6 +66,7 @@ span {
     font-size: 13px;
     line-height: 16px;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tweet__element-feed_btn {
@@ -73,7 +74,7 @@ span {
     align-items: center;
 }
 
-#commit:hover .btn__hover-commit {
+/* #commit:hover .btn__hover-commit {
     fill: #1D9BF0;
 }
 
@@ -87,7 +88,7 @@ span {
 
 #share:hover .btn__hover-share {
     fill: #1D9BF0;
-}
+} */
 
 .tweet__element-feed_commit {
     padding: 0;
@@ -123,4 +124,22 @@ span {
     border: none;
     width: 24px;
     height: 24px;
+}
+
+.tweet__element-feed_like {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../images/Tweet__like.svg);
+}
+
+.tweet__element-feed_like-active {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../images/Tweet__isLiked.svg);
 }

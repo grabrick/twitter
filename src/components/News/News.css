@@ -102,3 +102,7 @@
     height: 69px;
     border-radius: 15px;
 }
+
+.News__title-time {
+    padding-left: 5px;
+}
