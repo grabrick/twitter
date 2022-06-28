@@ -1,0 +1,106 @@
+.message {
+    max-width: 600px;
+    border-left: 0.5px solid #EBEEF0;
+    border-right: 0.5px solid #EBEEF0;
+}
+
+.message__header {
+    margin-bottom: 15px;
+}
+
+.message__header_title {
+    width: 300px;
+    padding: 20px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: #0F1419;
+}
+
+.message__header-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.message__btn {
+    display: flex;
+}
+
+.message__btn_settings {
+    background-image: url('../../images/high__brightness.svg');
+    background-position: center;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.message__btn_message {
+    background-image: url('../../images/add__massage.svg');
+    background-position: center;
+    width: 22px;
+    height: 21px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.message__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0 10px;
+    border: 1px solid #d9dcdf;
+    border-radius: 100px;
+}
+
+.message__input {
+    margin-left: 5px;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+}
+
+.message__profile {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.message__profile:hover {
+    background-color: #F7F9F9;
+    transition: linear 0.1s;
+}
+
+.message__picture {
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+.message__name {
+    margin: 0;
+    color: #0F1419;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.message__name_id {
+    color: #5B7083;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.message__profile_wrapper {
+    margin-left: 10px;
+}
+
+.message__name_id {
+    padding-left: 5px;
+}

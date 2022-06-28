@@ -16,10 +16,10 @@ function Nav() {
             <NavLink to="/" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Home</li></NavLink>
           </div>
 
-          {/* <div className="Nav__catalog_btn">
+          <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-messages" />
-            <li className="Nav__catalog_link">Messages</li>
-          </div> */}
+            <NavLink to="/Message" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Messages</li></NavLink>
+          </div>
 
           <div className="Nav__catalog_btn">
             <div className="Nav__catalog_image-profile" />

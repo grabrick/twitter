@@ -1,5 +1,6 @@
 import FeedHome from './components/element/FeedHome/FeedHome';
 import FeedProfile from './components/element/FeedProfile/FeedProfile';
+import FeedMessage from './components/element/FeedMessage/FeedMessage'
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
 import './App.css';
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FeedHome />} />
         <Route path='/Profile' element={<FeedProfile />} />
+        <Route path='/Message' element={<FeedMessage />} />
       </Routes>
     </div>
   );
