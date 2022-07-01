@@ -3,6 +3,7 @@ import Nav from '../../Nav/Nav'
 import News from '../../News/News'
 import Feed from '../../Feed/Feed'
 // import Message from '../../Message/Message'
+// import NewsItem from '../../NewsItem/NewsItem';
 
 
 function FeedHome() {

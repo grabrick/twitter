@@ -11,20 +11,26 @@ function Nav() {
       </div>
       <div className="Nav__catalog">
         <ul>
-          <div className="Nav__catalog_btn">
-            <div className="Nav__catalog_image-home" />
-            <NavLink to="/" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Home</li></NavLink>
-          </div>
+          <NavLink to="/" className="Nav__catalog-link_swipe">
+            <div className="Nav__catalog_btn">
+              <div className="Nav__catalog_image-home" />
+              <li className="Nav__catalog_link">Home</li>
+            </div>
+          </NavLink>
 
-          <div className="Nav__catalog_btn">
-            <div className="Nav__catalog_image-messages" />
-            <NavLink to="/Message" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Messages</li></NavLink>
-          </div>
+          <NavLink to="/Message" className="Nav__catalog-link_swipe">
+            <div className="Nav__catalog_btn">
+              <div className="Nav__catalog_image-messages" />
+              <li className="Nav__catalog_link">Messages</li>
+            </div>
+          </NavLink>
 
-          <div className="Nav__catalog_btn">
-            <div className="Nav__catalog_image-profile" />
-            <NavLink to="/Profile" className="Nav__catalog-link_swipe"><li className="Nav__catalog_link">Profile</li></NavLink>
-          </div>
+          <NavLink to="/Profile" className="Nav__catalog-link_swipe">
+            <div className="Nav__catalog_btn">
+              <div className="Nav__catalog_image-profile" />
+              <li className="Nav__catalog_link">Profile</li>
+            </div>
+          </NavLink>
         </ul>
       </div>
     </section>

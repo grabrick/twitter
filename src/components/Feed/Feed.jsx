@@ -2,7 +2,7 @@ import React from 'react';
 import './Feed.css'
 import profile from '../../images/profile.svg'
 import Tweet from '../Tweet/Tweet';
-
+import { NavLink } from "react-router-dom";
 
 function Feed() {
   return (
@@ -16,7 +16,7 @@ function Feed() {
           <div className="feed__tweet_wrapper">
             <div className="feed__tweet_wrap">
               <div className="feed__tweet_avatar-wrapper">
-                <img className="feed__tweet_avatar-profile" src={profile} alt="avatar"/>
+                <NavLink to='/Profile'><img className="feed__tweet_avatar-profile" src={profile} alt="avatar"/></NavLink>
               </div>
               <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" required />
             </div>
