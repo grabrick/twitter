@@ -4,6 +4,15 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 
+const tweetData = [
+  {
+    id: ' @johndue',
+    name: 'Devon Lane',
+    text: 'Tom is in a big hurry.',
+    tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
+  }
+]
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

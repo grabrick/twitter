@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="page">
       <Routes>
-        <Route path="/" element={<FeedHome />} />
+        <Route path="/" render={() => <FeedHome />} />
         <Route path='/Profile' element={<FeedProfile />} />
-        <Route path='/Message' element={<FeedMessage />} />
+        <Route path='/Message' render={() => <FeedMessage />} />
       </Routes>
     </div>
   );
