@@ -1,10 +1,10 @@
 import React from 'react';
 import './Feed.css'
 import profile from '../../images/profile.svg'
-import Tweet from '../Tweet/Tweet';
+import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
 
-function Feed() {
+function Feed(props) {
   return (
     <section className="feed">
       <div className="feed__container">
@@ -33,7 +33,7 @@ function Feed() {
         <div className="feed__bar"></div>
       </div>
 
-      <Tweet />
+      <Tweet tweetData={props.tweetData} />
     </section>
   );
 }

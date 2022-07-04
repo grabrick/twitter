@@ -1,5 +1,5 @@
 import React from "react";
-import '../News/News.css'
+import '../NewsItem/News/News.css'
 import loupe from '../../images/loops.svg'
 // import News from '../News/News'
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from '../../Nav/Nav'
-import News from '../../News/News'
+import News from '../../NewsItem/News/News'
 import Profile from '../../Profile/Profile';
 
-function FeedProfile() {
+function FeedProfile(props) {
     return(
         <>
         <Nav />
-        <Profile />
+        <Profile tweetData={props.tweetData} />
         <News />
         </>
     )

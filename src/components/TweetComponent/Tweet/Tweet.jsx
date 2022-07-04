@@ -1,9 +1,8 @@
 import React from "react";
-import '../Tweet/Tweet.css'
-import TweetAvatar from '../../images/Tweet__avatar.svg';
+import './Tweet.css'
+import TweetAvatar from '../../../images/Tweet__avatar.svg';
 // import TweetImage from '../../images/Tweet__image.svg'
-import TweetComponent from "../TweetComponent/TweetComponent";
-
+import TweetComponent from "../TweetComponent";
 
 function Tweet(props) {
 
@@ -15,8 +14,8 @@ function Tweet(props) {
   //     tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
   //   }
   // ]
-
-  const tweetElement = tweetData
+  // debugger
+  const tweetElement = props.tweetData
     .map(props => <TweetComponent Avatar={TweetAvatar} name={props.name} id={props.id} lastTime='20s' text={props.text} tweetImage={props.tweetImage} />)
 
   return (

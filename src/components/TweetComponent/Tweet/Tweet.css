@@ -136,7 +136,7 @@ span {
     border: none;
     width: 24px;
     height: 24px;
-    background-image: url(../../images/Tweet__like.svg);
+    background-image: url(../../../images/Tweet__like.svg);
 }
 
 .tweet__element-feed_like-active {
@@ -145,5 +145,5 @@ span {
     border: none;
     width: 24px;
     height: 24px;
-    background-image: url(../../images/Tweet__isLiked.svg);
+    background-image: url(../../../images/Tweet__isLiked.svg);
 }

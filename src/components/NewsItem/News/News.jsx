@@ -1,6 +1,6 @@
 import React from "react";
-import '../News/News.css'
-import NewsItem from "../NewsItem/NewsItem";
+import './News.css'
+import NewsItem from "../NewsItem";
  
 function News() {
     const newsItem = [

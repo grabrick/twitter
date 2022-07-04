@@ -3,9 +3,9 @@ import '../Profile/Profile.css';
 import Intro from '../../images/intro.svg';
 import Avatar from '../../images/Avatar.svg';
 import Arrow from '../../images/arrow.svg';
-import Tweet from "../Tweet/Tweet";
+import Tweet from "../TweetComponent/Tweet/Tweet";
 
-function Profile() {
+function Profile(props) {
   const [show, setShow] = React.useState("Tweets")
 
   const handleTweetsClick = () => {
@@ -87,7 +87,7 @@ function Profile() {
             
 
             {show === "Tweets" && (
-              <Tweet />
+              <Tweet tweetData={props.tweetData} />
             )}
           </div>
         </div>
