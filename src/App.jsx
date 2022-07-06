@@ -6,12 +6,11 @@ import React from 'react';
 import './App.css';
 
 function App(props) {
-  // debugger
   return (
     <div className="page">
       <Routes>
-        <Route path="/" element={<FeedHome tweetData={props.tweetData} />} />
-        <Route path='/Profile' element={<FeedProfile tweetData={props.tweetData} />} />
+        <Route path="/" element={<FeedHome tweetData={props.state.tweetData} />} />
+        <Route path='/Profile' element={<FeedProfile tweetData={props.state.tweetData} />} />
         <Route path='/Message' element={<FeedMessage />} />
       </Routes>
     </div>
