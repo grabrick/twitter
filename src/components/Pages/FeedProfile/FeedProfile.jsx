@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '../../Nav/Nav'
-import News from '../../NewsItem/News/News'
+import NewsItem from '../../NewsItem/NewsItem';
 import Profile from '../../Profile/Profile';
 
 function FeedProfile(props) {
@@ -8,7 +8,7 @@ function FeedProfile(props) {
         <>
         <Nav />
         <Profile tweetData={props.tweetData} />
-        <News />
+        <NewsItem newsData={props.newsData} />
         </>
     )
 }

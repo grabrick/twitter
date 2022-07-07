@@ -1,18 +1,11 @@
 import React from "react";
 import './News.css'
-import NewsItem from "../NewsItem";
+import NewsComponent from "./NewsComponent/NewsComponent";
  
-function News() {
-    const newsItem = [
-        {
-            title: 'Covid19',
-            subtitle: 'England’s Chief Medical Officer says the UK is at the most dangerous time of the pandemic',
-            tags: ' #Covid19'
-        }
-    ]
+function News(props) {
 
-    const newsElement = newsItem
-        .map(news => <NewsItem title={news.title} subtitle={news.subtitle} tags={news.tags} />)
+    const newsElement = props.newsData
+        .map(props => <NewsComponent title={props.title} subtitle={props.subtitle} tags={props.tags} />)
 
     return(
         <>

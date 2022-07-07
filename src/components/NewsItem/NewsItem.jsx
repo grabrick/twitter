@@ -1,7 +1,8 @@
 import React from "react";
 import '../NewsItem/News/News.css'
 import loupe from '../../images/loops.svg'
-// import News from '../News/News'
+import News from "./News/News";
+
 
 function NewsItem(props) {
     return(
@@ -11,14 +12,9 @@ function NewsItem(props) {
             <input type="text" className="News__search" placeholder="Search Twitter" required />
         </div>
         <div className="News__popular-info">
-            <h1 className="News__popular-title">What’s happening</h1>
+            <h1 className="News__popular-title">Trends for you</h1>
             <div className="News__popular-wrapper">
-                <div className="News__popular-element">
-                    <p className="News__title" id="News__element-title">{props.title}<span className="News__title-time">&middot; last night</span></p>
-                    <p className="News__popular-subtitle">{props.subtitle}</p>
-                    <p className="News__tags" id="News__element-tags">Trending with<span className="News__title-tags">{props.tags}</span></p>
-                </div>
-                <div className="New__popular-img" />
+                <News newsData={props.newsData} />
             </div>
         </div>
     </section>
