@@ -5,6 +5,13 @@ import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
 
 function Feed(props) {
+  let submitElement = React.createRef();
+
+  let addPost = () => {
+    let text = submitElement.current.value;
+    props.addPost(text);
+  }
+
   return (
     <section className="feed">
       <div className="feed__container">
@@ -18,7 +25,7 @@ function Feed(props) {
               <div className="feed__tweet_avatar-wrapper">
                 <NavLink to='/Profile'><img className="feed__tweet_avatar-profile" src={profile} alt="avatar"/></NavLink>
               </div>
-              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" required />
+              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" required ref={submitElement} />
             </div>
             <div className="feed__tweet_wrapper-button">
               <div className="feed__tweet-button">
@@ -26,7 +33,7 @@ function Feed(props) {
                 <div className="feed__tweet_button-gif"></div>
                 <div className="feed__tweet_button-emoji"></div>
               </div>
-              <button className="feed__tweet_button-tweet feed__tweet_text">Tweet</button>
+              <button className="feed__tweet_button-tweet feed__tweet_text" onClick={addPost}>Tweet</button>
             </div>
           </div>
         </div>

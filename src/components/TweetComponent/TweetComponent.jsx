@@ -25,7 +25,7 @@ function TweetComponent(props) {
       </div>
 
       <div className="tweet__element_img">
-        <img src={props.tweetImage} alt="img" className="tweet__image" />
+        <img src={props.tweetImage} alt='' className="tweet__image" />
       </div>
 
       <div className="tweet__element_btn">

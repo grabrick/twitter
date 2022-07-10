@@ -1,5 +1,4 @@
 .Nav {
-    height: 900px;
     margin: 0;
     padding: 0;
 }
@@ -22,7 +21,7 @@
     color: #0F1419;
     /* width: 200px; */
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 19px;
     line-height: 23px;
     list-style: none;
@@ -48,22 +47,22 @@
 
 .Nav__catalog_image-home {
     background-image: url(../../images/home__img.svg);
-    margin: 15px 20px 15px 10px;
-    width: 30px;
-    height: 30px;
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
 }
 
 .Nav__catalog_image-messages {
     background-image: url(../../images/message__img.svg);
-    margin: 15px 20px 15px 10px;
-    width: 30px;
-    height: 30px;
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
 }
 
 .Nav__catalog_image-profile {
     background-image: url(../../images/profile__img.svg);
-    margin: 15px 20px 15px 10px;
-    width: 30px;
-    height: 30px;
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
     
 }

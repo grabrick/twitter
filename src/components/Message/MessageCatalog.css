@@ -2,6 +2,7 @@
     max-width: 600px;
     border-left: 0.5px solid #EBEEF0;
     border-right: 0.5px solid #EBEEF0;
+    height: auto;
 }
 
 .message__header {
