@@ -9,8 +9,19 @@ function App(props) {
   return (
     <div className="page">
       <Routes>
-        <Route path="/" element={<FeedHome tweetData={props.state.tweetData} newsData={props.state.newsData} addPost={props.addPost} />} />
-        <Route path='/Profile' element={<FeedProfile tweetData={props.state.tweetData} newsData={props.state.newsData} />} />
+        <Route path="/" element={<FeedHome 
+          tweetData={props.state.mainTweetData.tweetData} 
+          newsData={props.state.newsData} 
+          addPost={props.addPost} 
+          newText={props.state.mainTweetData}
+          updateNewTweetText={props.updateNewTweetText} 
+        />} />
+
+        <Route path='/Profile' element={<FeedProfile 
+          tweetData={props.state.mainTweetData.tweetData} 
+          newsData={props.state.newsData} 
+        />} />
+
         <Route path='/Message' element={<FeedMessage />} />
       </Routes>
     </div>

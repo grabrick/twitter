@@ -9,7 +9,7 @@ function FeedHome(props) {
   return (
     <>
       <Nav />
-      <Feed tweetData={props.tweetData} addPost={props.addPost} />
+      <Feed tweetData={props.tweetData} addPost={props.addPost} newTweetText={props.newText.newTweetText} updateNewTweetText={props.updateNewTweetText} />
       <NewsItem newsData={props.newsData} />
     </>
   );

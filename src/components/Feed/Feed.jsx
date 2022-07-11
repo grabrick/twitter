@@ -8,8 +8,12 @@ function Feed(props) {
   let submitElement = React.createRef();
 
   let addPost = () => {
+    props.addPost();
+  }
+
+  let onPostChange = () => {
     let text = submitElement.current.value;
-    props.addPost(text);
+    props.updateNewTweetText(text);
   }
 
   return (
@@ -25,7 +29,7 @@ function Feed(props) {
               <div className="feed__tweet_avatar-wrapper">
                 <NavLink to='/Profile'><img className="feed__tweet_avatar-profile" src={profile} alt="avatar"/></NavLink>
               </div>
-              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" required ref={submitElement} />
+              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} ref={submitElement} value={props.newTweetText} />
             </div>
             <div className="feed__tweet_wrapper-button">
               <div className="feed__tweet-button">

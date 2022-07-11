@@ -1,14 +1,19 @@
-import { rerenderEntireTrea } from "../render";
+let rerenderEntireTrea = () => {
+    console.log('fffgrg');
+}
 
 let state = {
-    tweetData: [
-        {
-            id: '@johndue',
-            name: 'Devon Lane',
-            text: 'Tom is in a big hurry.',
-            tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
-        }
-    ],
+    mainTweetData: {
+        tweetData: [
+            {
+                id: '@johndue',
+                name: 'Devon Lane',
+                text: 'Tom is in a big hurry.',
+                tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
+            }
+        ],
+        newTweetText: ''
+    },
     
     newsData: [
         {
@@ -46,15 +51,23 @@ let state = {
 
 
 
-export let addPost = (postMessage, postImage) => {
+export const addPost = () => {
     let newPost = {
         id: '@ggrrht',
         name: 'Kirill',
-        text: postMessage,
-        tweetImage: postImage
+        text: state.mainTweetData.newTweetText,
     };
-    state.tweetData.push(newPost);
-    rerenderEntireTrea(state)
+    state.mainTweetData.tweetData.push(newPost);
+    state.mainTweetData.newTweetText = '';
+    rerenderEntireTrea(state);
 }
 
+export const updateNewTweetText = (newText) => {
+    state.mainTweetData.newTweetText = newText;
+    rerenderEntireTrea(state);
+}
+
+export const subscribe = (observer) => {
+   rerenderEntireTrea = observer;
+}
 export default state
