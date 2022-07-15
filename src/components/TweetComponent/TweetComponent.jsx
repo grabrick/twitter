@@ -16,7 +16,7 @@ function TweetComponent(props) {
     <div className="tweet">
       <div className="tweet__header">
         <div className="tweet__header_element">
-          <img src={props.Avatar} alt="avatar" className="tweet__header_img" />
+          <img src={props.Avatar} alt="avatar" className="tweet__header_img avatar" />
           <div className="tweet__header_element-text">
             <p className="tweet__header_element-title">{props.name}<span>{props.id} &middot;</span><span id="tweet__time">{props.lastTime}</span></p>
             <p className="tweet__header_element-subtitle">{props.text}</p>
@@ -25,7 +25,7 @@ function TweetComponent(props) {
       </div>
 
       <div className="tweet__element_img">
-        <img src={props.tweetImage} alt='' className="tweet__image" />
+        <img src={props.tweetImage} alt='' className="tweet__image avatar" />
       </div>
 
       <div className="tweet__element_btn">

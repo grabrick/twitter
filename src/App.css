@@ -14,3 +14,7 @@
 p {
   margin: 0;
 }
+
+.avatar {
+  cursor: pointer;
+}

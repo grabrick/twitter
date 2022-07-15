@@ -12,9 +12,8 @@ function App(props) {
         <Route path="/" element={<FeedHome 
           tweetData={props.state.mainTweetData.tweetData} 
           newsData={props.state.newsData} 
-          addPost={props.addPost} 
+          dispatch={props.dispatch} 
           newText={props.state.mainTweetData}
-          updateNewTweetText={props.updateNewTweetText} 
         />} />
 
         <Route path='/Profile' element={<FeedProfile 

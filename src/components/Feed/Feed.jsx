@@ -3,17 +3,21 @@ import './Feed.css'
 import profile from '../../images/profile.svg'
 import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
+import { addPostActionCreator, updateTweetActionCreator } from '../../redux/state';
 
 function Feed(props) {
   let submitElement = React.createRef();
 
+
+
   let addPost = () => {
-    props.addPost();
+    props.dispatch(addPostActionCreator());
   }
 
   let onPostChange = () => {
     let text = submitElement.current.value;
-    props.updateNewTweetText(text);
+    let action = updateTweetActionCreator(text);
+    props.dispatch(action);
   }
 
   return (
@@ -27,7 +31,7 @@ function Feed(props) {
           <div className="feed__tweet_wrapper">
             <div className="feed__tweet_wrap">
               <div className="feed__tweet_avatar-wrapper">
-                <NavLink to='/Profile'><img className="feed__tweet_avatar-profile" src={profile} alt="avatar"/></NavLink>
+                <NavLink to='/Profile'><img className="feed__tweet_avatar-profile avatar" src={profile} alt="avatar"/></NavLink>
               </div>
               <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} ref={submitElement} value={props.newTweetText} />
             </div>

@@ -44,7 +44,7 @@ function Profile(props) {
             <img src={Intro} alt="intro" className="profile__main_intro" />
             <div className="profile__main_info">
               <div className="profile__main_header">
-                <img src={Avatar} alt="logo" className="profile__main_logo" />
+                <img src={Avatar} alt="logo" className="profile__main_logo avatar" />
                 <button className="profile__main_btn">Edit profile</button>
               </div>
 
