@@ -1,17 +1,16 @@
 import React from 'react';
 import Nav from '../../Nav/Nav'
-// import News from '../../News/News'
-import MessagesCatalog from '../../Message/MessageCatalog';
-import MessageMain from '../../Message/MessageMain/MessageMain';
+import MessagesCatalog from '../../MessageItem/Message/MessageCatalog/MessageCatalog';
+import MessageDialog from '../../MessageItem/Message/MessageDialog/MessageDialog';
 
-function Message() {
+function FeedMessage(props) {
     return(
         <>
             <Nav />
-            <MessagesCatalog />
-            <MessageMain />
+            <MessagesCatalog catalogData={props.catalogData}  />
+            <MessageDialog dispatch={props.dispatch} dialogData={props.messageData} newMessageBody={props.newMessage.newMessageBody} />
         </>
     )
 }
 
-export default Message
+export default FeedMessage

@@ -3,20 +3,18 @@ import './Feed.css'
 import profile from '../../images/profile.svg'
 import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
-import { addPostActionCreator, updateTweetActionCreator } from '../../redux/state';
+import { addPostCreator, updateTweetCreator } from '../../redux/state';
 
 function Feed(props) {
   let submitElement = React.createRef();
 
-
-
   let addPost = () => {
-    props.dispatch(addPostActionCreator());
+    props.dispatch(addPostCreator());
   }
 
   let onPostChange = () => {
     let text = submitElement.current.value;
-    let action = updateTweetActionCreator(text);
+    let action = updateTweetCreator(text);
     props.dispatch(action);
   }
 

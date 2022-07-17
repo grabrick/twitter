@@ -21,7 +21,12 @@ function App(props) {
           newsData={props.state.newsData} 
         />} />
 
-        <Route path='/Message' element={<FeedMessage />} />
+        <Route path='/Message' element={<FeedMessage
+          dispatch={props.dispatch}
+          catalogData={props.state.messageData.messageCatalog}
+          messageData={props.state.messageData.messageDialog}
+          newMessage={props.state.messageData}
+        />} />
       </Routes>
     </div>
   );

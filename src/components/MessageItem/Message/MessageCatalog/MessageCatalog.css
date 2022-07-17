@@ -30,7 +30,7 @@
 }
 
 .message__btn_settings {
-    background-image: url('../../images/high__brightness.svg');
+    background-image: url('../../../../images/high__brightness.svg');
     background-position: center;
     width: 22px;
     height: 22px;
@@ -38,7 +38,7 @@
 }
 
 .message__btn_message {
-    background-image: url('../../images/add__massage.svg');
+    background-image: url('../../../../images/add__massage.svg');
     background-position: center;
     width: 22px;
     height: 21px;

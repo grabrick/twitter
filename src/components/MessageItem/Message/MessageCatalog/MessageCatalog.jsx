@@ -1,9 +1,9 @@
 import React from 'react';
-import loupe from '../../images/loops.svg'
-import picture from '../../images/image__peple.svg'
-import '../Message/MessageCatalog.css'
+import loupe from '../../../../images/loops.svg'
+import CatalogMessage from '../CatalogMessage';
+import './MessageCatalog.css'
 
-function MessagesCatalog() {
+function MessagesCatalog(props) {
     return (
     <section className='message'>
         <div className="message__header">
@@ -19,16 +19,9 @@ function MessagesCatalog() {
                 <img src={loupe} alt="loupe" className="message__search_loupe" />
                 <input type="text" className="message__input" placeholder='Search Direct Messages'/>
             </div>
+            <CatalogMessage messageData={props.catalogData} />
         </div>
 
-        <div className="message__profile">
-            <img src={picture} alt="" className='message__picture' />
-            <div className="message__profile_wrapper">
-                <h4 className="message__name">Elena<span className='message__name_id'>@fffhrjkc</span></h4>
-                <p className='message__last_activ'>Hi</p>
-            </div>
-        </div>
-        
     </section>
     )
 }
