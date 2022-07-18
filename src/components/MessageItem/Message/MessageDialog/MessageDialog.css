@@ -94,11 +94,12 @@
 }
 
 .messages__outer {
+    margin-top: 10px;
     display: flex;
 }
 
 .messages__inner {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-direction: row-reverse;
 }
@@ -109,6 +110,8 @@
 }
 
 .messages__spacer {
+    word-break: break-word;
+    cursor: pointer;
     flex: 1;
 }
 
@@ -150,12 +153,20 @@
     padding-right: 5px;
 }
 
-.messages__spacer_text {
-    padding-left: 5px;
-    display: flex;
-    align-items: center;
+.message__spacer_wrapper {
     border-radius: 50px;
     background-color: #F3F4F8;
-    width: 100px;
-    height: 30px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.messages__spacer_text {
+    display: flex;
+    /* max-width: 150px; */
+
 }

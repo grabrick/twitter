@@ -15,7 +15,9 @@ function DialogComponent(props) {
                   <ul className="messages__action_menu"></ul>
                 </div>
                 <div className="messages__spacer">
-                  <p className="messages__spacer_text">{props.message}</p>
+                  <div className="message__spacer_wrapper">
+                    <p className="messages__spacer_text">{props.message}</p>
+                  </div>
                 </div>
               </div>
               <div className="messages__status">

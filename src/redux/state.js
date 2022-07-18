@@ -82,7 +82,6 @@ let store = {
 
     // dispatcher 
     dispatch(action) {
-        debugger
         if(action.type === ADD_POST) {
             let newPost = {
                 id: '@ggrrht',

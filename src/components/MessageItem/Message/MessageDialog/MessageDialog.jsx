@@ -10,7 +10,6 @@ function MessageMain (props) {
     let newMessageBody = props.newMessageBody;
 
     let addMessage = () => {
-      debugger
         props.dispatch(sendMessageCreator())
     }
 
