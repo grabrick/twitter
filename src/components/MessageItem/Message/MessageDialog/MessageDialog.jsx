@@ -2,7 +2,7 @@ import React from 'react';
 import '../MessageDialog/MessageDialog.css'
 import avatar from '../../../../images/image__peple.svg'
 import info from '../../../../images/information-line.svg'
-import { sendMessageCreator, updateMessageTextCreator } from '../../../../redux/state';
+import { sendMessageCreator, updateMessageTextCreator } from '../../../../redux/messageReducer';
 import DialogMessage from '../DialogMessage'
 
 function MessageMain (props) {

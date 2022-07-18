@@ -3,7 +3,7 @@ import './Feed.css'
 import profile from '../../images/profile.svg'
 import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
-import { addPostCreator, updateTweetCreator } from '../../redux/state';
+import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
 
 function Feed(props) {
   let addPost = () => {
