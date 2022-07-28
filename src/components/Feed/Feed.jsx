@@ -3,18 +3,18 @@ import './Feed.css'
 import profile from '../../images/profile.svg'
 import Tweet from '../TweetComponent/Tweet/Tweet';
 import { NavLink } from "react-router-dom";
-import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
+// import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
 
-function Feed(props) {
-  let addPost = () => {
-    props.dispatch(addPostCreator());
-  }
+function Feed() {
+  // let addPost = () => {
+  //   props.dispatch(addPostCreator());
+  // }
 
-  let onPostChange = (e) => {
-    let text = e.target.value;
-    let action = updateTweetCreator(text);
-    props.dispatch(action);
-  }
+  // let onPostChange = (e) => {
+  //   let text = e.target.value;
+  //   let action = updateTweetCreator(text);
+  //   props.dispatch(action);
+  // }
 
   return (
     <section className="feed">
@@ -29,7 +29,7 @@ function Feed(props) {
               <div className="feed__tweet_avatar-wrapper">
                 <NavLink to='/Profile'><img className="feed__tweet_avatar-profile avatar" src={profile} alt="avatar"/></NavLink>
               </div>
-              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} value={props.newTweetText} />
+              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" />
             </div>
             <div className="feed__tweet_wrapper-button">
               <div className="feed__tweet-button">
@@ -37,14 +37,14 @@ function Feed(props) {
                 <div className="feed__tweet_button-gif"></div>
                 <div className="feed__tweet_button-emoji"></div>
               </div>
-              <button className="feed__tweet_button-tweet feed__tweet_text" onClick={addPost}>Tweet</button>
+              <button className="feed__tweet_button-tweet feed__tweet_text">Tweet</button>
             </div>
           </div>
         </div>
         <div className="feed__bar"></div>
       </div>
 
-      <Tweet tweetData={props.tweetData} />
+      <Tweet />
     </section>
   );
 }

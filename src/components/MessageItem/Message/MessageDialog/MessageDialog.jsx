@@ -4,18 +4,20 @@ import avatar from '../../../../images/image__peple.svg'
 import info from '../../../../images/information-line.svg'
 import { sendMessageCreator, updateMessageTextCreator } from '../../../../redux/messageReducer';
 import DialogMessage from '../DialogMessage'
+import { useDispatch, useSelector } from 'react-redux'
 
-function MessageMain (props) {
-
-    let newMessageBody = props.newMessageBody;
+function MessageMain () {
+    const messageBody = useSelector(state => state.main.state.messageData.newMessageBody)
+    const dispatch = useDispatch()
 
     let addMessage = () => {
-        props.dispatch(sendMessageCreator())
+        dispatch(sendMessageCreator())
     }
 
     let onMessageChange = (e) => {
+      debugger
         let body = e.target.value;
-        props.dispatch(updateMessageTextCreator(body))
+        dispatch(updateMessageTextCreator(body))
     }
 
     return (
@@ -32,13 +34,13 @@ function MessageMain (props) {
         </div>
 
         <div className="messages__main_window">
-          <DialogMessage dialogData={props.dialogData} />
+          <DialogMessage/>
         </div>
 
         <div className="messages__main_input">
           <div className="feed__tweet_button-img"></div>
           <div className="feed__tweet_button-gif"></div>
-          <textarea className="messages__text_input" value={newMessageBody} onChange={onMessageChange} placeholder="Start a new message" ></textarea>
+          <textarea className="messages__text_input" placeholder="Start a new message" value={messageBody} onChange={onMessageChange} ></textarea>
           <div className="messages__text_input-send" onClick={addMessage}></div>
         </div>
       </div>

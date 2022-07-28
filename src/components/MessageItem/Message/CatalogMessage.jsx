@@ -1,9 +1,11 @@
 import React from "react";
 import CatalogComponent from '../CatalogComponent/CatalogComponent'
+import { useSelector } from 'react-redux'
 
-function CatalogMessage(props) {
-    const CatalogElement = props.messageData
-        .map(props => <CatalogComponent name={props.name} userId={props.userId} lastMessage={props.lastMessage} />)
+function CatalogMessage() {
+    const catalog= useSelector(state => state.main.state.messageData.messageCatalog)
+    const CatalogElement = catalog
+        .map(catalog => <CatalogComponent name={catalog.name} userId={catalog.userId} lastMessage={catalog.lastMessage} />)
 
     return (
         <>

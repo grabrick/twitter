@@ -1,6 +1,6 @@
 import React from "react";
 
-function TweetComponent(props) {
+function TweetComponent(state) {
     const [count, setCount] = React.useState(6),
       [like, isLike] = React.useState(false),
       onLikeButtonClick = () => {
@@ -16,16 +16,16 @@ function TweetComponent(props) {
     <div className="tweet">
       <div className="tweet__header">
         <div className="tweet__header_element">
-          <img src={props.Avatar} alt="avatar" className="tweet__header_img avatar" />
+          <img src={state.Avatar} alt="avatar" className="tweet__header_img avatar" />
           <div className="tweet__header_element-text">
-            <p className="tweet__header_element-title">{props.name}<span>{props.id} &middot;</span><span id="tweet__time">{props.lastTime}</span></p>
-            <p className="tweet__header_element-subtitle">{props.text}</p>
+            <p className="tweet__header_element-title">{state.name}<span>{state.id} &middot;</span><span id="tweet__time">{state.lastTime}</span></p>
+            <p className="tweet__header_element-subtitle">{state.text}</p>
           </div>
         </div>
       </div>
 
       <div className="tweet__element_img">
-        <img src={props.tweetImage} alt='' className="tweet__image avatar" />
+        <img src={state.tweetImage} alt='' className="tweet__image avatar" />
       </div>
 
       <div className="tweet__element_btn">

@@ -1,7 +1,7 @@
 import React from "react";
 import avatar from '../../../../../images/image__peple.svg'
 
-function DialogComponent(props) {
+function DialogComponent(state) {
     return (
         <div className="messages">
             <div className="messages__outer">
@@ -16,7 +16,7 @@ function DialogComponent(props) {
                 </div>
                 <div className="messages__spacer">
                   <div className="message__spacer_wrapper">
-                    <p className="messages__spacer_text">{props.message}</p>
+                    <p className="messages__spacer_text">{state.message}</p>
                   </div>
                 </div>
               </div>

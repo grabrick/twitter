@@ -3,12 +3,12 @@ import Nav from '../../Nav/Nav'
 import MessagesCatalog from '../../MessageItem/Message/MessageCatalog/MessageCatalog';
 import MessageDialog from '../../MessageItem/Message/MessageDialog/MessageDialog';
 
-function FeedMessage(props) {
+function FeedMessage() {
     return(
         <>
             <Nav />
-            <MessagesCatalog catalogData={props.catalogData}  />
-            <MessageDialog dispatch={props.dispatch} dialogData={props.messageData} newMessageBody={props.newMessage.newMessageBody} />
+            <MessagesCatalog />
+            <MessageDialog />
         </>
     )
 }

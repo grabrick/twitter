@@ -3,7 +3,7 @@ import loupe from '../../../../images/loops.svg'
 import CatalogMessage from '../CatalogMessage';
 import './MessageCatalog.css'
 
-function MessagesCatalog(props) {
+function MessagesCatalog() {
     return (
     <section className='message'>
         <div className="message__header">
@@ -19,7 +19,7 @@ function MessagesCatalog(props) {
                 <img src={loupe} alt="loupe" className="message__search_loupe" />
                 <input type="text" className="message__input" placeholder='Search Direct Messages'/>
             </div>
-            <CatalogMessage messageData={props.catalogData} />
+            <CatalogMessage />
         </div>
 
     </section>

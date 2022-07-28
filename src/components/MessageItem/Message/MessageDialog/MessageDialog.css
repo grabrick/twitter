@@ -167,6 +167,5 @@
 
 .messages__spacer_text {
     display: flex;
-    /* max-width: 150px; */
-
+    font-size: 15px;
 }

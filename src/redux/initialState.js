@@ -1,9 +1,5 @@
-import messageReducer from "./messageReducer"
-import tweetReducer from "./tweetReducer"
-
-
-let store = {
-    _state: {
+const initialState = {
+    state: {
         mainTweetData: {
             tweetData: [
                 {
@@ -65,30 +61,7 @@ let store = {
             ],
             newMessageBody: ''
         }
-    },
-    _callSubscriber()  {
-        console.log('fffgrg');
-    },
-
-    getState() {
-        return this._state;
-    },
-    subscribe(observer) {
-        this._callSubscriber = observer;
-    },
-
-    // dispatcher 
-    dispatch(action) {
-        this._state.mainTweetData = tweetReducer(this._state.mainTweetData, action)
-        this._state.messageData = messageReducer(this._state.messageData, action)
-
-
-        this._callSubscriber(this._state);
     }
 }
 
-
-
-
-
-export default store
+export default initialState

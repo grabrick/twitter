@@ -4,7 +4,7 @@ import loupe from '../../images/loops.svg'
 import News from "./News/News";
 
 
-function NewsItem(props) {
+function NewsItem() {
     return(
     <section className="News">
         <div className="News__search-bar">
@@ -14,7 +14,7 @@ function NewsItem(props) {
         <div className="News__popular-info">
             <h1 className="News__popular-title">Trends for you</h1>
             <div className="News__popular-wrapper">
-                <News newsData={props.newsData} />
+                <News />
             </div>
         </div>
     </section>

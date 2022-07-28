@@ -5,12 +5,12 @@ import Feed from '../../Feed/Feed'
 import NewsItem from '../../NewsItem/NewsItem';
 
 
-function FeedHome(props) {
+function FeedHome() {
   return (
     <>
       <Nav />
-      <Feed tweetData={props.tweetData} dispatch={props.dispatch} newTweetText={props.newText.newTweetText}/>
-      <NewsItem newsData={props.newsData} />
+      <Feed />
+      <NewsItem />
     </>
   );
 }
