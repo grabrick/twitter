@@ -7,15 +7,14 @@ import DialogMessage from '../DialogMessage'
 import { useDispatch, useSelector } from 'react-redux'
 
 function MessageMain () {
-    const messageBody = useSelector(state => state.main.state.messageData.newMessageBody)
+    const messageBody = useSelector(state => state.message.newMessageBody)
     const dispatch = useDispatch()
 
-    let addMessage = () => {
+    let onSendMessage = () => {
         dispatch(sendMessageCreator())
     }
 
     let onMessageChange = (e) => {
-      debugger
         let body = e.target.value;
         dispatch(updateMessageTextCreator(body))
     }
@@ -41,7 +40,7 @@ function MessageMain () {
           <div className="feed__tweet_button-img"></div>
           <div className="feed__tweet_button-gif"></div>
           <textarea className="messages__text_input" placeholder="Start a new message" value={messageBody} onChange={onMessageChange} ></textarea>
-          <div className="messages__text_input-send" onClick={addMessage}></div>
+          <div className="messages__text_input-send" onClick={onSendMessage}></div>
         </div>
       </div>
     );

@@ -64,7 +64,6 @@
 }
 
 .feed__tweet_wrapper-button {
-    margin: 31px 0 0 0;
     display: flex;
     justify-content: space-between;
 }
@@ -75,16 +74,8 @@
     margin-left: 60px;
 }
 
-.feed__tweet_button-img {
-    background-image: url(../../images/btn__img.svg);
-    margin-right: 15px;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-}
 
 .feed__tweet_button-gif {
-    background-image: url(../../images/btn__gif.svg);
     margin-right: 15px;
     cursor: pointer;
     width: 24px;
@@ -92,7 +83,6 @@
 }
 
 .feed__tweet_button-emoji {
-    background-image: url(../../images/btn__emoji.svg);
     margin-right: 15px;
     cursor: pointer;
     width: 24px;
@@ -121,4 +111,31 @@
     height: 10px;
     background-color: #F7F9FA;
     border: 0.5px solid #EBEEF0;
+}
+
+/* Button */
+
+.button-img { 
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.button-img input[type="button"] {
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    background-image: url('../../images/btn__img.svg'); 
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.button-img input[type="file"] { 
+    width: 150px; 
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
 }

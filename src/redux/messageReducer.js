@@ -3,30 +3,37 @@ const SEND_MESSAGE = 'SEND-MESSAGE'
 
 
 const initialState = {
-    messageDialog: [
-        {
-            message: 'how are u?',
+        messageCatalog: [
+            {
+                name: 'Elena',
+                userId: '@fffhrjkc',
+                lastMessage: 'Hi'
+            }
+        ],
+        messageDialog: [
+            {
+                message: 'how are u?',
 
-        }
-    ],
-
+            }
+        ],
     newMessageBody: ''
 };
 
 const messageReducer = (state = initialState, action) => {
-    // eslint-disable-next-line default-case
     switch(action.type) {
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {...state, newMessageBody: action.body};
         case SEND_MESSAGE:
-                let body = state.newMessageBody;
-                // state.newMessageBody = '';
-                // state.messageDialog.push({ message: body});
+            let body = {
+                message: state.newMessageBody
+            };
+
             return {
                 ...state,
                 newMessageBody: '',
-                messageDialog: [...state.messageDialog, body]
+                messageDialog: [...state.messageDialog, body],
             };
+
+        case UPDATE_NEW_MESSAGE_TEXT:
+            return {...state, newMessageBody: action.body};
         default:
             return state;
     }

@@ -1,20 +1,17 @@
-import initialState from "./initialState";
-
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_TWEET_TEXT = 'UPDATE-NEW-TWEET-TEXT'
 
-
-// const initialStatev = {
-//     tweetData: [
-//         {
-//             id: '@johndue',
-//             name: 'Devon Lane',
-//             text: 'Tom is in a big hurry.',
-//             tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
-//         }
-//     ],
-//     newTweetText: ''
-// };
+const initialState = {
+    tweetData: [
+        {
+            id: '@johndue',
+            name: 'Devon Lane',
+            text: 'Tom is in a big hurry.',
+            tweetImage: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg'
+        }
+    ],
+    newTweetText: ''
+};
 
 const tweetReducer = (state = initialState, action) => {
     switch (action.type) {
