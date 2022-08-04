@@ -18,5 +18,3 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
     </React.StrictMode>
     </Provider>
   );
-
-// rerenderEntireTrea(store.getState())

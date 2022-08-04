@@ -1,6 +1,7 @@
 .messages__main {
     margin: 0;
     width: 500px;
+    border-right: 0.5px solid #EBEEF0;
 }
 
 .messages__main_header-picture {
@@ -10,6 +11,7 @@
 }
 
 .messages__main_header {
+    border-bottom: 0.5px solid #EBEEF0;
     padding: 5px 10px 0 10px;
     display: flex;
     align-items: center;
@@ -35,18 +37,18 @@
 
 .messages__main_window {
     margin-top: 10px;
-    height: 620px;
+    height: 615px;
 }
 
 .messages__main_input {
     display: flex;
     align-items: center;
-    padding-top: 5px;
     width: 500px;
     border-top: 0.5px solid #EBEEF0;
 }
 
 .messages__text_input {
+    margin-top: 5px;
     border: 2px solid #EBEEF0;
     border-radius: 100px;
     font-style: normal;
@@ -58,6 +60,12 @@
     padding-top: 5px;
     padding-left: 10px;
     height: 20px;
+    margin-left: 10px;
+}
+
+.button__message_img {
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .messages__text_input:hover {
@@ -85,7 +93,7 @@
     background-image: url('../../../../images/send.svg');
     width: 20px;
     height: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .messages__main_header-id {

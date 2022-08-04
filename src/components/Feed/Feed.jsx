@@ -11,7 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function Feed() {
   const dispatch = useDispatch();
-  const newTweetData = useSelector(state => state.tweet.newTweetText);
+  const newTweetText = useSelector(state => state.tweet.newTweetText);
+  // const newTweetImage = useSelector(state => state.tweet.newTweetText)
 
   let addPost = () => {
     dispatch(addPostCreator());
@@ -22,6 +23,12 @@ function Feed() {
     let action = updateTweetCreator(text);
     dispatch(action);
   }
+
+  // let onPostImageChange = (e) => {
+  //   let image = e.target.value;
+  //   let action = updateTweetCreator(image)
+  //   dispatch(action)
+  // } ломает проект при добавление буквы value={newTweetImage} onChange={onPostImageChange}
 
   return (
     <section className="feed">
@@ -36,13 +43,13 @@ function Feed() {
               <div className="feed__tweet_avatar-wrapper">
                 <NavLink to='/Profile'><img className="feed__tweet_avatar-profile avatar" src={profile} alt="avatar"/></NavLink>
               </div>
-              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} value={newTweetData} />
+              <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} value={newTweetText} />
             </div>
             <div className="feed__tweet_wrapper-button">
               <form className="feed__tweet-button">
                 <div className="button-img">
                   <input type="button" />
-                  <input className="feed__tweet_button-img" type="file"/>
+                  <input className="feed__tweet_button-img" type="file" />
                 </div>
                 {/* <input className="feed__tweet_button-gif" />
                 <input className="feed__tweet_button-emoji" /> */}

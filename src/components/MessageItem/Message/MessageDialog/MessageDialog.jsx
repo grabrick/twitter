@@ -36,9 +36,11 @@ function MessageMain () {
           <DialogMessage/>
         </div>
 
-        <div className="messages__main_input">
-          <div className="feed__tweet_button-img"></div>
-          <div className="feed__tweet_button-gif"></div>
+          <div className="messages__main_input">
+          <div className="button-img button__message_img">
+            <input type="button" />
+            <input className="feed__tweet_button-img" type="file"/>
+          </div>
           <textarea className="messages__text_input" placeholder="Start a new message" value={messageBody} onChange={onMessageChange} ></textarea>
           <div className="messages__text_input-send" onClick={onSendMessage}></div>
         </div>

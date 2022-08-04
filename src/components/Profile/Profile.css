@@ -22,6 +22,7 @@
 }
 
 .profile__name {
+    padding-left: 5px;
     margin: 0;
     font-style: normal;
     font-weight: 700;
@@ -41,6 +42,7 @@
     justify-content: space-between;
     align-items: flex-end;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 .profile__main_intro {
@@ -114,7 +116,7 @@
     line-height: 19px;
 }
 
-.profile__main_data {
+.profile__main_hb-info {
     padding-left: 9px;
     color: #5B7083;
     font-style: normal;
