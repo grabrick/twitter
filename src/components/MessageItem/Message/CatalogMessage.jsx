@@ -1,5 +1,5 @@
 import React from "react";
-import CatalogComponent from '../CatalogComponent/CatalogComponent'
+import CatalogComponent from '../../MessageItem/Message/MessageCatalog/CatalogComponent/CatalogComponent'
 import { useSelector } from 'react-redux'
 
 function CatalogMessage() {

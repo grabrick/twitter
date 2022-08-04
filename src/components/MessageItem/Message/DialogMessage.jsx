@@ -3,7 +3,7 @@ import DialogComponent from '../Message/MessageDialog/DialogComponent/DialogComp
 import { useSelector } from 'react-redux'
 
 function DialogMessage() {
-    const dialogs= useSelector(state => state.message.messageDialog)
+    const dialogs = useSelector(state => state.message.messageDialog)
     const DialogElement = dialogs
         .map(dialogs =>  <DialogComponent message={dialogs.message} />)
 

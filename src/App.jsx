@@ -2,6 +2,7 @@ import FeedHome from './components/Pages/FeedHome/FeedHome';
 import FeedProfile from './components/Pages/FeedProfile/FeedProfile';
 import FeedMessage from './components/Pages/FeedMessage/FeedMessage'
 import ProfileSwitcher from './components/Pages/FeedProfile/profileSwitcher/profileSwitcher';
+import FeedFriends from './components/Pages/FeedFriends/FeedFriends';
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
 import './App.css';
@@ -17,6 +18,9 @@ function App() {
         <Route path='/Message' element={<FeedMessage/>} />
 
         <Route path='/Profile/users' element={ProfileSwitcher} />
+
+        <Route path='/Friends' element={<FeedFriends />} />
+
       </Routes>
     </div>
   );

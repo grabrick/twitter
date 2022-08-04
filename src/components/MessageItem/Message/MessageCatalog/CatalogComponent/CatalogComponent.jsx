@@ -1,5 +1,5 @@
 import React from "react";
-import picture from '../../../images/image__peple.svg'
+import picture from '../../../../../images/image__peple.svg'
 
 function CatalogComponent(state) {
     return (

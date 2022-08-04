@@ -31,6 +31,13 @@ function Nav() {
               <li className="Nav__catalog_link">Profile</li>
             </div>
           </NavLink>
+
+          <NavLink to="/Friends" className="Nav__catalog-link_swipe">
+            <div className="Nav__catalog_btn">
+              <div className="Nav__catalog_image-friends" />
+              <li className="Nav__catalog_link">Friends</li>
+            </div>
+          </NavLink>
         </ul>
       </div>
     </section>
