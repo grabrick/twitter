@@ -57,6 +57,7 @@
 .friends__item_wrapper-wrapper {
     width: 520px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 

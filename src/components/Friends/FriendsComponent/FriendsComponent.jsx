@@ -1,3 +1,5 @@
+import React from "react";
+
 function FriendsComponent(state) {
     return (
         <div className="friends__item">
@@ -9,7 +11,7 @@ function FriendsComponent(state) {
                 <div className="friends__item_wrapper">
                     <h4 className="friends__item__name">{state.name}<span className='friends__item_name-id'>{state.userId}</span></h4>
                 </div>
-                <button className="friends__item_btn" value='lolo'></button>
+                <button className="friends__item_btn">{state.followed}</button>
             </div>
         </div>
     );
