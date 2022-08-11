@@ -1,10 +1,11 @@
 import React from "react";
+import undefinedAvatar from '../../../images/users__avatar.svg'
 
 function FriendsComponent(state) {
     return (
         <div className="friends__item">
             <div className="friends__item_photos-wrapper">
-                <img src={state.photos} alt="" className='friends__item_photos' />
+                <img src={state.photos ? state.photos === null : undefinedAvatar} alt="" className='friends__item_photos' />
                 <div className="friends__item_status"></div>
             </div>
             <div className="friends__item_wrapper-wrapper">

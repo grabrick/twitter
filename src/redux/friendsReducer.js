@@ -12,10 +12,11 @@ const initialState = {
 };
 
 const friendsReducer = (state = initialState, action) => {
+    // debugger
     switch(action.type) {
         case RENDER_FRIENDS:
             return {
-                ...state, users: action.friendsList
+                ...state, friendsList: action.friendsList
             }
 
         default: 
@@ -23,5 +24,5 @@ const friendsReducer = (state = initialState, action) => {
     }
 }
 
-export const renderFriendsActionCreator = () => ({type: RENDER_FRIENDS})
+export const renderFriendsActionCreator = (friendsList) => ({type: RENDER_FRIENDS, friendsList: friendsList})
 export default friendsReducer;
