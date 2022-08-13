@@ -28,7 +28,8 @@ function Friends() {
 
         }
     
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <section className="friends__main_window">
