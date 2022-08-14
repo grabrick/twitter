@@ -4,7 +4,7 @@ import { useSelector } from "react-redux/es/exports";
 
 function ProfileRender(state) {
     const ownerProfile = useSelector(state => state.profileUsers.ownUsers);
-    const allUsers = useSelector(state => state.profileUsers.allUsers);
+    // const allUsers = useSelector(state => state.profileUsers.allUsers);
 
     // const switcher = () => {
     //     if(state.allUsers.id !== state.ownUsers.id) {

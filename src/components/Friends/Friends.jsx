@@ -1,5 +1,6 @@
 import React from "react";
 import './Friends.css'
+import './Friends.scss'
 import FriendsRender from "./FriendsRender/FriendsRender";
 import { useDispatch, useSelector } from 'react-redux'
 import { renderFriendsActionCreator } from '../../redux/friendsReducer'
@@ -15,11 +16,6 @@ function Friends() {
         dispatch(renderFriendsActionCreator(user));
     }
     useEffect(() => {
-            // fetch(requestURL).then(response => {
-            //     return response.json();
-            // }).then(item => {
-            //     renderFriends(item.items);
-            // })
         if(users.length === 0) {
             axios.get('https://social-network.samuraijs.com/api/1.0/users')
                 .then(res => {
