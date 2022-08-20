@@ -1,28 +1,31 @@
 import React from "react";
-import { Route, Routes, Redirect } from 'react-router-dom';
-import authPage from "./pages/authPage";
-import createPage from "./pages/createPage";
-import detailPage from "./pages/detailPage";
-import linkPage from "./pages/linkPage";
+import { Route, Routes, Navigate } from 'react-router-dom';
+import LinkPage from './pages/LinkPage';
+import CreatePage from './pages/CreatePage'
+import DetailPage from "./pages/DetailPage";
+import AuthPage from "./pages/AuthPage";
 
 function useRoutes(isAuthticated) {
     if(isAuthticated) {
-        return(
+        return (
             <Routes>
-                <Route path="/links" exact element={linkPage} />
-                <Route path="/create" exact element={createPage} />
-                <Route path="/detail" element={detailPage} />
-                <Redirect to="/create" />
-            </Routes>
-        )
-    }
+              <Route path="/links" exact element={ <LinkPage /> } />
+              <Route path="/create" element={ <CreatePage /> } />
+              <Route path="/detail/:id" element={ <DetailPage /> } />
 
-    return (
-        <Routes>
-            <Route path="/" exact element={authPage} /> 
-            <Redirect to="/" /> 
-        </Routes>
-    )
+              {/* --------- Redirect------- */}
+              <Route element={<Navigate to="/create" replace />} /> 
+            </Routes>
+        );
+    }
+        return (
+            <Routes>
+              <Route path="/" element={ <AuthPage /> } />
+
+              {/* --------- Redirect------- */}
+              <Route element={<Navigate to="/" replace />} />
+            </Routes>
+        );
 }
 
 export default useRoutes;

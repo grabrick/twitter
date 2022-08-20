@@ -1,11 +1,13 @@
 import React from 'react'
+import AuthUser from '../component/authUser/AuthUser'
 
-function authPage() {
+
+function AuthPage() {
   return (
-    <div className='contai'>
-       <h1>gfg</h1>
+    <div>
+       <AuthUser />
     </div>
   )
 }
 
-export default authPage;
+export default AuthPage;

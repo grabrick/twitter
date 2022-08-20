@@ -1,11 +1,11 @@
 import React from "react";
 
-function detailPage() {
+function DetailPage() {
     return (
         <div className='contai'>
-           <h1>gfg</h1>
+           <h1>detailPage</h1>
         </div>
       )
 }
 
-export default detailPage;
+export default DetailPage;

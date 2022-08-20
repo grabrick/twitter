@@ -1,11 +1,11 @@
 import React from "react";
 
-function linkPage() {
+function LinkPage() {
     return (
         <div className='contai'>
-           <h1>gfg</h1>
+           <h1>linkPage</h1>
         </div>
       )
 }
 
-export default linkPage;
+export default LinkPage;
