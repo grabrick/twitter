@@ -18,3 +18,7 @@ code {
     *::after {
       box-sizing: border-box;
     }
+
+.contai h1 {
+    color: white;
+}

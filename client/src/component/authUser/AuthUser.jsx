@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 // import { useEffect } from "react";
 import backImg from '../../../src/images/backImage.png'
 import authLogo from '../../../src/images/nav__logo.svg'
 import { useHttp } from "../../hooks/http.hook";
 import './AuthUser.css'
+import {AuthContext} from "../../context/AuthContext";
 
 function AuthUser() {
+    const auth = useContext(AuthContext)
     const {loading, request} = useHttp()
     const [form, setForm] = useState({
         email: '',
@@ -32,7 +34,7 @@ function AuthUser() {
     const loginHandler = async () => {
         try {
             const data = await request("/api/auth/login", "POST", {...form})
-            console.log("Data", data);
+            auth.login(data.token, data.userId)
         } catch (e) {
             
         }

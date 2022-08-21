@@ -13,7 +13,7 @@ const config = require('../../config/default.json')
 //     }
 //     // console.log(payload)
 //     return  jwt.sign(payload, secret, {expiresIn: "1h"}, {})
-// }
+// } "secret_govno"
 
 const createToken = (id) => {
     return jwt.sign({id}, "secret_govno", {
@@ -89,7 +89,7 @@ class authController {
 
             const token = createToken(user._id)
 
-            res.json({token, message: 'fff'})
+            res.json({token})
         } catch (e) {
             res.status(500).json({message: e})
         }

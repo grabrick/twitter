@@ -1,10 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const session = require('express-session')
-const passport = require('passport')
-const bcrypt = require('bcrypt')
-const secret = require('./config/secret')
-const user = require('./models/User')
+// const bcrypt = require('bcrypt')
+// const user = require('./models/User')
 const app = express()
 const config = require('config')
 const PORT = config.get('port') || 5000
