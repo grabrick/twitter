@@ -2,6 +2,7 @@ import React from 'react'
 import useRoutes from './routes';
 import {useAuth} from "./hooks/auth.hook";
 import {AuthContext} from "./context/AuthContext";
+import './App.css'
 
 
 function App() {

@@ -1,0 +1,75 @@
+.Nav {
+    margin: 0;
+    padding: 0;
+}
+
+.Nav__logo {
+    padding: 10px 0 10px 10px;
+}
+
+.Nav__image {
+    width: 255px;
+    height: 53px;
+}
+
+.Nav__catalog ul {
+    padding: 0;
+    margin: 0;
+}
+
+.Nav__catalog_link {
+    color: #0F1419;
+    /* width: 200px; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    list-style: none;
+}
+
+.Nav__catalog-link_swipe {
+    text-decoration: none;
+}
+
+.Nav__catalog_btn {
+    width: 200px;
+    border-radius: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.Nav__catalog_btn:hover {
+    cursor: pointer;
+    background-color: #EBEEF0;
+    transition: linear 0.3s;
+}
+
+.Nav__catalog_image-home {
+    background-image: url(../../images/home__img.svg);
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.Nav__catalog_image-messages {
+    background-image: url(../../images/message__img.svg);
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.Nav__catalog_image-profile {
+    background-image: url(../../images/profile__img.svg);
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
+    
+}
+
+.Nav__catalog_image-friends {
+    background-image: url(../../images/friends.svg);
+    margin: 15px 10px 15px 10px;
+    width: 24px;
+    height: 24px;
+}

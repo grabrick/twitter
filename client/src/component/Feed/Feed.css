@@ -1,0 +1,141 @@
+.feed {
+    border-left: 0.5px solid #EBEEF0;
+    border-right: 0.5px solid #EBEEF0;
+}
+
+.feed__header {
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.5px solid #EBEEF0;
+    border-bottom: 0.5px solid #EBEEF0;
+}
+
+.feed__name {
+    margin: 15px 0 15px 15px;
+    color: #0F1419;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.feed__stars {
+    background-image: url(../../images/star.svg);
+    margin: 15px 15px 15px 0;
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.feed__tweet {
+    margin: 0;
+}
+
+.feed__tweet_wrapper {
+    margin: 10px 15px 10px 15px;
+}
+
+.feed__tweet_wrap {
+    display: flex;
+}
+
+.feed__tweet_avatar-profile {
+    cursor: pointer;
+    width: 49px;
+    height: 49px;
+    margin-right: 12px;
+    border-radius: 30px;
+}
+
+.feed__tweet_title {
+    border: none;
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+.feed__tweet_title::-webkit-scrollbar {
+    width: 0;
+}
+
+.feed__tweet_wrapper-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed__tweet-button {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
+.feed__tweet_button-gif {
+    margin-right: 15px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.feed__tweet_button-emoji {
+    margin-right: 15px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.feed__tweet_button-tweet {
+    border: none;
+    background-color: #1DA1F2;
+    cursor: pointer;
+    width: 77px;
+    height: 39px;
+    border-radius: 100px;
+}
+
+.feed__tweet_text {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.feed__bar {
+    margin: 0;
+    width: 598px;
+    height: 10px;
+    background-color: #F7F9FA;
+    border: 0.5px solid #EBEEF0;
+}
+
+/* Button */
+
+.button-img { 
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.button-img input[type="button"] {
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    background-image: url('../../images/btn__img.svg'); 
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.button-img input[type="file"] { 
+    width: 150px; 
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.page {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 270px auto 350px;
+    justify-content: center;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+p {
+    margin: 0;
+}
+
+.avatar {
+    cursor: pointer;
+}
+
+.Authpage {
+    margin: 0 auto;
+}
