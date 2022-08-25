@@ -1,6 +1,14 @@
 .Nav {
+    display: flex;
+    height: 700px;
     margin: 0;
     padding: 0;
+}
+
+.Nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .Nav__logo {
@@ -28,6 +36,8 @@
 }
 
 .Nav__catalog-link_swipe {
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -35,8 +45,6 @@
     width: 200px;
     border-radius: 50px;
     list-style: none;
-    display: flex;
-    align-items: center;
 }
 
 .Nav__catalog_btn:hover {
@@ -72,4 +80,58 @@
     margin: 15px 10px 15px 10px;
     width: 24px;
     height: 24px;
+}
+
+.Nav__user_main-wrapper {
+    align-items: center;
+    display: flex;
+    /* width: 200px; */
+    height: 50px;
+    border-radius: 100px;
+}
+
+.Nav__user_main-wrapper:hover {
+    cursor: pointer;
+    background-color: #EBEEF0;
+    transition: linear 0.3s;
+}
+
+.Nav__wrapper_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Nav__user_photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.Nav__user_wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+
+.Nav__user_name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Nav__user_id {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.Nav__user_more {
+    margin-left: 20px;
+}
+
+.Nav__user_main-wrapper_wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
 }

@@ -12,7 +12,9 @@ function useRoutes(isAuthticated) {
         return (
           <div className="page">
             <Routes>
-              <Route path="/" element={<FeedHome />} />
+              <Route path="/" element={<Navigate to="/Home" replace />} />
+
+              <Route path="/Home" element={<FeedHome />} />
 
               <Route path="/Profile" element={<FeedProfile />} />
 
@@ -23,18 +25,29 @@ function useRoutes(isAuthticated) {
               <Route path="/Friends" element={<FeedFriends />} />
 
               {/* --------- Redirect------- */}
-              <Route element={<Navigate to="/" replace />} />
+              <Route path="/Auth" element={<Navigate to="/Home" replace />} />
             </Routes>
           </div>
         );
     }
         return (
-            <Routes>
-              <Route path="/" element={ <FeedAuth /> } />
+          <Routes>
+            <Route path="/Auth" element={<FeedAuth />} />
+            
+            {/* --------- Redirect------- */}
+            <Route path="/Home" element={<Navigate to="/Auth" replace />} />
 
-              {/* --------- Redirect------- */}
-              <Route element={<Navigate to="/" replace />} />
-            </Routes>
+            <Route path="/Profile" element={<Navigate to="/Auth" replace />} />
+
+            <Route path="/Message" element={<Navigate to="/Auth" replace />} />
+
+            <Route path="/Profile/users" element={<Navigate to="/Auth" replace />} />
+
+            <Route path="/Friends" element={<Navigate to="/Auth" replace />} />
+
+            {/* --------- Redirect------- */}
+            <Route path="/" element={<Navigate to="/Auth" replace />} />
+          </Routes>
         );
 }
 
