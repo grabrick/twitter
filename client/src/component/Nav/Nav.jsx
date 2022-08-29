@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../images/nav__logo.svg";
-import Avatar from "../../images/profile.svg"
-import MoreLine from "../../images/more-line.svg"
 import "./Nav.css";
+import NavRender from "./NavRender/NavRender";
 
 function Nav() {
   return (
@@ -45,16 +44,9 @@ function Nav() {
             </ul>
           </div>
         </div>
-        <div className="Nav__user_main-wrapper">
-          <div className="Nav__user_main-wrapper_wrap">
-            <img src={Avatar} alt="avatar" className="Nav__user_photo avatar" />
-            <div className="Nav__user_wrapper">
-              <p className="Nav__user_name">Davide Biscuso</p>
-              <span className="Nav__user_id">@biscuttu</span>
-            </div>
-            <img src={MoreLine} alt="" className="Nav__user_more" />
-          </div>
-        </div>
+
+        <NavRender /> {/* Render маленького профиля */}
+
       </div>
     </section>
   );

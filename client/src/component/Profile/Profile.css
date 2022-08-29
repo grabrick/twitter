@@ -51,10 +51,13 @@
 }
 
 .profile__main_logo {
+    border-radius: 100px;
+    background-color: #0F1419;
     width: 142px;
     height: 139px;
     z-index: 1;
-    margin-left: 11px;
+    margin-left: 8px;
+    margin-top: 8px;
 }
 
 .profile__main_btn {
@@ -216,6 +219,25 @@
     color: #5B7083;
     font-style: normal;
     font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+.profile__avatar_wrapper {
+    margin-left: 10px;
+    width: 158px;
+    height: 158px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.profile__main_discription {
+    width: 500px;
+    word-break: break-word;
+    /* margin-bottom: 10px; */
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
 }

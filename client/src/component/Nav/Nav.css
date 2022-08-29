@@ -109,15 +109,17 @@
 }
 
 .Nav__user_wrapper {
+    width: 150px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 15px;
+    /* padding-left: 15px; */
 }
 
 .Nav__user_name {
     font-size: 15px;
     font-weight: 600;
+    padding-left: 5px;
 }
 
 .Nav__user_id {

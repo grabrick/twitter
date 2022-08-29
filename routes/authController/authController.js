@@ -5,15 +5,6 @@ const bcrypt = require('bcrypt')
 const User = require('../../models/User')
 const config = require('../../config/default.json')
 
-// const generateAccessToken = (user) => {
-//     const payload = {
-//         Id: user.id,
-//         email: user.email,
-//         pass: user.password
-//     }
-//     // console.log(payload)
-//     return  jwt.sign(payload, secret, {expiresIn: "1h"}, {})
-// } "secret_govno"
 
 const createToken = (id) => {
     return jwt.sign({id}, "secret_govno", {
@@ -75,17 +66,6 @@ class authController {
             if(!isMatch) {
                 res.status(400).json({message: 'Неверный пароль'})
             }
-
-            // const token = generateAccessToken(user)
-
-            // const token = jwt.sign(
-            //     {userId: user.id},
-            //             config.get('secret'),
-            //     {expiresIn: '1h'},
-            // )
-
-            // res.status(200).json(token, {message: 'Добро пожаловать'})
-            // res.json({token, userId: user.id})
 
             const token = createToken(user._id)
 

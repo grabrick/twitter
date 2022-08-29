@@ -1,13 +1,12 @@
 import React from 'react';
 import './Feed.css';
-import profile from '../../images/profile.svg';
 import Tweet from '../TweetComponent/Tweet/Tweet';
 // import btnImg from '../../images/btn__img.svg';
 // import btnGif from '../../images/btn__gif.svg'
 // import btnEmoji from '../../images/btn__emoji.svg'
-import { NavLink } from "react-router-dom";
 import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
 import { useDispatch, useSelector } from 'react-redux';
+import FeedRender from './FeedRender/FeedRender';
 
 function Feed() {
   const dispatch = useDispatch();
@@ -40,9 +39,9 @@ function Feed() {
         <div className="feed__tweet">
           <div className="feed__tweet_wrapper">
             <div className="feed__tweet_wrap">
-              <div className="feed__tweet_avatar-wrapper">
-                <NavLink to='/Profile'><img className="feed__tweet_avatar-profile avatar" src={profile} alt="avatar"/></NavLink>
-              </div>
+
+              <FeedRender />
+
               <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} value={newTweetText} />
             </div>
             <div className="feed__tweet_wrapper-button">

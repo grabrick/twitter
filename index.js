@@ -1,7 +1,5 @@
 const express = require('express')
 const mongoose = require('mongoose')
-// const bcrypt = require('bcrypt')
-// const user = require('./models/User')
 const app = express()
 const config = require('config')
 const PORT = config.get('port') || 5000
@@ -10,6 +8,7 @@ const PORT = config.get('port') || 5000
 app.use(express.json({ extended: true }))
 
 app.use('/api/auth', require('./routes/authRouter'))
+// app.use('/api/', require('./routes/syncRouter'))
 
 async function start() {
   try {

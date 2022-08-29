@@ -11,6 +11,6 @@ export const store = configureStore({
         message: messageReducer, 
         news: newsReducer,
         profileUsers: profileUsersReducer,
-        friends: friendsReducer
+        friends: friendsReducer,
     }
 })

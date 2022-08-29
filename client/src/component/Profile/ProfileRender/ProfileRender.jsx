@@ -2,31 +2,27 @@ import React from "react";
 import ProfileComponent from "../ProfileCompanent/ProfileComponent";
 import { useSelector } from "react-redux/es/exports";
 
-function ProfileRender(state) {
-    const ownerProfile = useSelector(state => state.profileUsers.ownUsers);
-    // const allUsers = useSelector(state => state.profileUsers.allUsers);
-
-    // const switcher = () => {
-    //     if(state.allUsers.id !== state.ownUsers.id) {
-    //         ownerProfile()
-    //     } else {
-    //         allUsers()
-    //     }
-    // }
+function ProfileRender() {
+    const Profile = useSelector(state => state.profileUsers.users);
     
-    const profileElement = ownerProfile.map(usersProfile => <ProfileComponent 
-        name={usersProfile.name} 
-        id={usersProfile.id} 
-        job={usersProfile.job} 
-        location={usersProfile.location} 
-        hbInfo={usersProfile.hbInfo} 
-        following={usersProfile.following} 
-        followers={usersProfile.followers} />
-        )
+    const profileElement = Profile.map((usersProfile) => (
+      <ProfileComponent
+        name={usersProfile.name}
+        id={usersProfile.id}
+        photo={usersProfile.photo}
+        backImage={usersProfile.backImage}
+        discr={usersProfile.discr}
+        job={usersProfile.job}
+        location={usersProfile.location}
+        hbInfo={usersProfile.hbInfo}
+        following={usersProfile.following}
+        followers={usersProfile.followers}
+      />
+    ));
         
     return (
         <>
-            {profileElement}    
+            {profileElement}
         </>
     );
 }

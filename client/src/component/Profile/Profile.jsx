@@ -5,9 +5,12 @@ import Intro from '../../images/intro.svg';
 import Arrow from '../../images/arrow.svg';
 // import Tweet from "../TweetComponent/Tweet/Tweet";
 import ProfileRender from '../Profile/ProfileRender/ProfileRender'
+import ProfilePopup from "../Profile/ProfilePopup/ProfilePopup";
 
 
 function Profile() {
+  const [isPopup, setIsPopup] = React.useState(false);
+
   const [show, setShow] = React.useState("Tweets")
 
   const handleTweetsClick = () => {
@@ -69,6 +72,7 @@ function Profile() {
             {/* {show === "Tweets" && (<Tweet/> )} */}
           </div>
         </div>
+        {isPopup === "popupEdit" && <ProfilePopup close={setIsPopup} />}  
     </section>
   );
 }
