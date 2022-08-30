@@ -19,14 +19,24 @@
 }
 
 .popup__container {
-    width: 500px;
+    /* width: 600px; */
+    height: 400px;
     background-color: #DDE1E1;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-    padding: 0 36px;
+    padding: 0 15px;
     position: relative;
+    overflow: auto;
+    padding-top: 70px;
 }
+
+.popup__wrapp_fixed {
+    top: 50px;
+    position: fixed;
+    z-index: 1;
+}
+
 
 .popup__title {
     font-style: normal;
@@ -34,9 +44,25 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    margin: 34px 0 0;
+    /* margin: 34px 0 0; */
+    margin: 0;
     max-width: 340px;
     word-wrap: break-word;
+    padding-left: 20px;
+}
+
+.popup__wraper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #44434324;
+    box-shadow: 0 2px 4px hsl(0deg 0% 1%);
+}
+
+.popup__wrapp_wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .popup__form {
@@ -63,8 +89,8 @@
 }
 
 .popup__button-save {
-    width: 358px;
-    height: 50px;
+    width: 60px;
+    height: 30px;
     color: #000000;
     background-color: #DDE1E1;
     cursor: pointer;
@@ -74,11 +100,9 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center; 
-    margin-bottom: 37px;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid #1F1F1F;
     border-radius: 8px;
+    margin-left: 324px;
 }
 .popup__button-save:hover {
     background-color: #126FA4;
@@ -88,8 +112,8 @@
 }
 
 .popup__button-close {
-    width: 23px;
-    height: 23px;
+    width: 15px;
+    height: 15px;
     background-image: url(../../../images/close.svg);
     background-color:rgba(0, 0, 0, 0);
     background-position: center;
@@ -97,9 +121,9 @@
     border: none;
     outline: none;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute;
     top: -30px;
-    right: -30px;
+    right: -30px; */
 }
 .popup__button-close:hover {
   opacity: 0.6;
@@ -123,4 +147,132 @@
     padding-bottom: 13px;
     margin: 0 0 40px;
     background-color: #DDE1E1;
+}
+
+#Bio {
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* text field */
+.text-field2 {
+    margin-bottom: 1rem;
+}
+
+.text-field__label2 {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.text-field__input2 {
+    display: block;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.text-field__input2[type="search"]::-webkit-search-decoration,
+.text-field__input2[type="search"]::-webkit-search-cancel-button,
+.text-field__input2[type="search"]::-webkit-search-results-button,
+.text-field__input2[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.text-field__input2::placeholder {
+    color: #1D9BF0;
+    opacity: 0.4;
+}
+
+.text-field__input2:focus {
+    color: #1D9BF0;
+    background-color: #DDE1E1;
+    border-color: #1D9BF0;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25); */
+    box-shadow: 0 0 0 0.1rem rgba(29, 155, 240, 1);
+}
+
+.text-field__input2:disabled,
+.text-field__input2[readonly] {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
+
+/* with floating label */
+.text-field_floating-2 {
+    position: relative;
+}
+
+.text-field_floating-2 .text-field__input2 {
+    background-color: #DDE1E1;
+    height: calc(2.5rem + 2px);
+    padding: 0.5rem 0.75rem;
+}
+
+.text-field_floating-2 .text-field__label2 {
+    position: absolute;
+    top: 50%;
+    left: 0.3125rem;
+    display: flex;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: none;
+    background-color: #DDE1E1;
+    color: #1D9BF0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+}
+
+.text-field_floating-2 .text-field__input2::-moz-placeholder {
+    color: transparent;
+}
+
+.text-field_floating-2 .text-field__input2::placeholder {
+    color: transparent;
+}
+
+.text-field_floating-2 .text-field__input2:focus~.text-field__label2,
+.text-field_floating-2 .text-field__input2:not(:placeholder-shown)~.text-field__label2 {
+    top: 0;
+    transform: translateY(-50%) scale(0.75);
+}
+
+.text-lable2 {
+    font-size: 12px;
+}
+
+.text__field_input {
+    width: 551px;
+
 }

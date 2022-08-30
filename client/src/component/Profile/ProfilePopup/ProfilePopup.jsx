@@ -12,43 +12,126 @@ function ProfilePopup({close}) {
     return (
       <>
         <div className={popup ? active : inactive} onClick={() => close(false)}>
-          <div className="popup__container" onClick={(e) => e.stopPropagation()}>
-            <h2 className="popup__title">Edit profile</h2>
-            <form className="popup__form" name="edit-Profile">
-              <input
-                placeholder="Enter your name"
-                type="text"
-                className="popup__input popup__input_name_name"
-                name="name"
-              />
-              <input
-                placeholder="Enter your description"
-                type="text"
-                className="popup__input popup__input_name_profession"
-                name="profession"
-              />
-              <div className="popup__input_wrap">
+          <div
+            className="popup__container"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="popup__wrapp_fixed">
+              <div className="popup__wraper">
+                <div className="popup__wrapp_wrapper">
+                  <button
+                    type="button"
+                    className="popup__button-close"
+                    onClick={() => close(false)}
+                  />
+                  <h2 className="popup__title">Edit profile</h2>
+                </div>
                 <input
-                  placeholder="Enter your geo"
-                  type="text"
-                  className="popup__input_wrapper popup__input_geo"
-                  name="geo"
-                />
-                <input
-                  placeholder="Enter your date of birth"
-                  type="text"
-                  className="popup__input_wrapper popup__input_date"
-                  name="date"
+                  type="submit"
+                  className="popup__button-save"
+                  value="Save"
+                  name="submit"
                 />
               </div>
-              <input
-                type="submit"
-                className="popup__button-save"
-                value="Save"
-                name="submit"
-              />
+            </div>
+            <form className="popup__form" name="edit-Profile">
+              <div className="auth__main_input-user_wrapper">
+                <div className="text-field2 text-field_floating-2 auth__main_input-email_wrapper">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">Name</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Bio"
+                    name="Bio"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">Bio</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Job"
+                    name="Job"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">Job</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Location"
+                    name="Location"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Location
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+              </div>
             </form>
-            <button type="button" className="popup__button-close" onClick={() => close(false)}/>
           </div>
         </div>
       </>

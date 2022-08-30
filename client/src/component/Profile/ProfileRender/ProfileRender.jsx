@@ -11,7 +11,7 @@ function ProfileRender() {
         id={usersProfile.id}
         photo={usersProfile.photo}
         backImage={usersProfile.backImage}
-        discr={usersProfile.discr}
+        bio={usersProfile.bio}
         job={usersProfile.job}
         location={usersProfile.location}
         hbInfo={usersProfile.hbInfo}

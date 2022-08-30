@@ -25,7 +25,7 @@ function ProfileComponent(state) {
         </div>
 
         <div className="profile__main_element2">
-          <p className="profile__main_discription">{state.discr}</p>
+          <p className="profile__main_discription">{state.bio}</p>
           <p className="profile__main_job">{state.job}</p>
           <span className="profile__main_location">{state.location}</span>
           <span className="profile__main_hb-info">{state.hbInfo}</span>
