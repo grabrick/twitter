@@ -7,7 +7,6 @@ import Friends from "../../Friends/Friends";
 function FeedFriends() {
     return (
         <>
-            <Nav />
             <Friends />
             <NewsItem />
         </>

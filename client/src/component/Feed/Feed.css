@@ -1,6 +1,7 @@
 .feed {
     border-left: 0.5px solid #EBEEF0;
     border-right: 0.5px solid #EBEEF0;
+    margin-left: 200px;
 }
 
 .feed__header {

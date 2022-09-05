@@ -3,6 +3,7 @@ import useRoutes from './routes';
 import {useAuth} from "./hooks/auth.hook";
 import {AuthContext} from "./context/AuthContext";
 import './App.css'
+import Nav from '../src/component/Nav/Nav'
 
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
         token, login, logout, userId, isAuthenticated
       }}>
         <div className='contai'>
+          {/* Крайне сомнительное решения */}
+          <>
+            <Nav />  
+          </>
+          
           { routes }
         </div>
       </AuthContext.Provider>

@@ -6,7 +6,6 @@ import Profile from '../../Profile/Profile';
 function FeedProfile() {
     return(
         <>
-        <Nav />
         <Profile />
         <NewsItem />
         </>

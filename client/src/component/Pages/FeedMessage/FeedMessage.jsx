@@ -6,7 +6,6 @@ import MessageDialog from '../../MessageItem/Message/MessageDialog/MessageDialog
 function FeedMessage() {
     return(
         <>
-            <Nav />
             <MessagesCatalog />
             <MessageDialog />
         </>
