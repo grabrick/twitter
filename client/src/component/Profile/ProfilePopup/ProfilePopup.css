@@ -25,14 +25,15 @@
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
-    padding: 0 15px;
+    /* padding: 0 15px; */
     position: relative;
     overflow: auto;
     padding-top: 70px;
 }
 
 .popup__wrapp_fixed {
-    top: 50px;
+    width: 571px;
+    top: 157px;
     position: fixed;
     z-index: 1;
 }
@@ -52,15 +53,17 @@
 }
 
 .popup__wraper {
+    border-radius: 10px 0 0 0;
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #44434324;
+    background-color: #dde1e1bc;
     box-shadow: 0 2px 4px hsl(0deg 0% 1%);
 }
 
 .popup__wrapp_wrapper {
+    margin-left: 10px;
     display: flex;
     align-items: center;
 }
@@ -68,6 +71,7 @@
 .popup__form {
     display: flex;
     flex-direction: column;
+    margin: 0 10px;
 }
 
 .popup__input {
@@ -102,13 +106,12 @@
     text-align: center; 
     border: 1px solid #1F1F1F;
     border-radius: 8px;
-    margin-left: 324px;
+    margin-right: 10px;
 }
 .popup__button-save:hover {
-    background-color: #126FA4;
+    border: 2px solid #126FA4;
     transition: linear 0.3s;
     color: #FFFFFF;
-    border: none;
 }
 
 .popup__button-close {

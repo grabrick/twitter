@@ -4,7 +4,6 @@ import FriendsComponent from "../FriendsComponent/FriendsComponent";
 
 
 function FriendsRender() {
-
     const friendList = useSelector(state => state.friends.friendsList);
     const friendsElement = friendList
         .map(friendList => <FriendsComponent name={friendList.name} userId={friendList.userId} photos={friendList.photos} followed={friendList.followed} />)

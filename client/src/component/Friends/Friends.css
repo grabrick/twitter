@@ -1,7 +1,7 @@
 .friends__main_window {
-    width: 600px;
     border-left: 0.5px solid #EBEEF0;
     border-right: 0.5px solid #EBEEF0;
+    display: flex;
 }
 
 .friends__item {
@@ -74,4 +74,21 @@
     background-color: white;
     width: 70px;
     height: 30px;
+    margin-right: 10px;
+}
+
+.active__color_page {
+    color: red;
+    font-weight: 600;
+}
+
+.friends__main_pages { 
+    display: flex;
+    justify-content: center;
+}
+
+.friends__main_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

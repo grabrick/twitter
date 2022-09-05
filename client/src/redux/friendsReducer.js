@@ -3,14 +3,10 @@ const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 
 const initialState = {
-    friendsList: [
-        // {
-        //     name: 'kirill',
-        //     userId: '@ffsdfsdf',
-        //     photos: 'https://avatarko.ru/img/kartinka/1/avatarko_anonim.jpg',
-            // followed: true,
-        // }
-    ]
+    friendsList: [],
+    pagesSize: 9,
+    totalUsersCount: 40,
+    currentPage: 1
 };
 
 const friendsReducer = (state = initialState, action) => {
