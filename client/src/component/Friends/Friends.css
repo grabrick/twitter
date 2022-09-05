@@ -3,6 +3,7 @@
     border-right: 0.5px solid #EBEEF0;
     display: flex;
     margin-left: 200px;
+    min-width: 580px;
 }
 
 .friends__item {
@@ -75,7 +76,6 @@
     background-color: white;
     width: 70px;
     height: 30px;
-    margin-right: 10px;
 }
 
 .active__color_page {
@@ -89,6 +89,7 @@
 }
 
 .friends__main_wrapper {
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

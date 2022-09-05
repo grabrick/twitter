@@ -14,7 +14,7 @@ function App() {
       <AuthContext.Provider value={{
         token, login, logout, userId, isAuthenticated
       }}>
-        <div className='contai'>
+        <div className='container'>
           {/* Крайне сомнительное решения */}
           <>
             <Nav />  
