@@ -11,7 +11,7 @@ let initialState = {
             hbInfo: 'Joined September 2011',
             following: '569',
             followers: '72'
-        }
+        },
     ],
 }
 

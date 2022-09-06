@@ -10,9 +10,13 @@ import * as axios from 'axios'
 
 function Friends() {
     const activePage = "active__color_page"
-    // const requestURL = 'https://social-network.samuraijs.com/api/1.0/users';
+
+
     const dispatch = useDispatch();
     const users = useSelector((state) => state.friends.friendsList);
+    const totalUsersCount = useSelector((state) => state.friends.totalUsersCount);
+    const pagesSize = useSelector(state => state.friends.pagesSize);
+    const currentPage = useSelector((state) => state.friends.currentPage);
 
     const renderFriends = (user) => {
         dispatch(renderFriendsActionCreator(user));
@@ -21,10 +25,6 @@ function Friends() {
     const changePage = (numberPage) => {
       dispatch(changePageActionCreator(numberPage))
     }
-
-    const totalUsersCount = useSelector((state) => state.friends.totalUsersCount);
-    const pagesSize = useSelector(state => state.friends.pagesSize);
-    const currentPage = useSelector((state) => state.friends.currentPage);
 
     useEffect(() => {
         if(users.length === 0) {
@@ -62,8 +62,7 @@ function Friends() {
 
           <div className="friends__main_pages">
             {pages.map((p) => {
-              return <span className={currentPage === p && activePage} id="number__page" onClick={() => {onChangePage(p)}}>{p}</span>
-                    
+              return <span className={currentPage === p && activePage} id="number__page" onClick={() => {onChangePage(p)}}>{p}</span>      
             })}
           </div>
         </div>
