@@ -18,7 +18,7 @@
     transition: opacity 500ms linear, visibility 0s linear;
 }
 
-.popup__container {
+.popup__container_wrapper {
     /* width: 600px; */
     height: 400px;
     background-color: #DDE1E1;
@@ -29,6 +29,11 @@
     position: relative;
     overflow: auto;
     padding-top: 70px;
+}
+
+.popup__container {
+    width: 571px;
+    overflow: hidden;
 }
 
 .popup__wrapp_fixed {
