@@ -98,3 +98,20 @@
 #number__page {
     cursor: pointer;
 }
+
+.friends__main_header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 600px;
+    border-bottom: 1px solid #EBEEF0;
+}
+
+.friends__main_header-text {
+    padding-left: 20px;
+    color: #0F1419;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}

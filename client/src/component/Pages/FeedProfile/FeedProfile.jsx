@@ -4,12 +4,17 @@ import NewsItem from '../../NewsItem/NewsItem';
 import Profile from '../../Profile/Profile';
 
 function FeedProfile() {
-    return(
+    return (
+      <>
         <>
-        <Profile />
-        <NewsItem />
+          <Nav />
         </>
-    )
+        <>
+          <Profile />
+          <NewsItem />
+        </>
+      </>
+    );
 }
 
 export default FeedProfile

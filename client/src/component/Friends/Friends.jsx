@@ -56,6 +56,9 @@ function Friends() {
     return (
       <section className="friends__main_window">
         <div className="friends__main_wrapper">
+          <div className="friends__main_header">
+              <p className="friends__main_header-text">Friends</p>
+          </div>
           <div className="friends__main_friends">
             <FriendsRender />
           </div>

@@ -8,8 +8,13 @@ import NewsItem from '../../NewsItem/NewsItem';
 function FeedHome() {
   return (
     <>
-      <Feed />
-      <NewsItem />
+      <>
+        <Nav />
+      </>
+      <>
+        <Feed />
+        <NewsItem />
+      </>
     </>
   );
 }

@@ -8,7 +8,7 @@ function NavProfilePopup({close}) {
     const [popup] = useState(false);
 
     const inactive = "nav__popup";
-    const active = "popup_opened";
+    const active = "nav__popup_opened";
 
     return (
       <>
@@ -22,7 +22,10 @@ function NavProfilePopup({close}) {
                 <NavPopupRender />
               </div>
 
-              <div className="nav__popup_wrapp-logout">
+              <div className="nav__popup_wrapp-logout" onClick={() => {
+                // localStorage.clear()
+                localStorage.removeItem('userData')
+                }}>
                     <NavLogoutRender />
               </div>
             </div>

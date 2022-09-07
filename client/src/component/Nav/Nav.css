@@ -112,7 +112,7 @@
 
 .Nav__user_wrapper {
     width: 150px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     flex-wrap: wrap;
     /* padding-left: 15px; */

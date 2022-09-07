@@ -4,12 +4,17 @@ import MessagesCatalog from '../../MessageItem/Message/MessageCatalog/MessageCat
 import MessageDialog from '../../MessageItem/Message/MessageDialog/MessageDialog';
 
 function FeedMessage() {
-    return(
+    return (
+      <>
         <>
-            <MessagesCatalog />
-            <MessageDialog />
+          <Nav />
         </>
-    )
+        <>
+          <MessagesCatalog />
+          <MessageDialog />
+        </>
+      </>
+    );
 }
 
 export default FeedMessage

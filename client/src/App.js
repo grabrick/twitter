@@ -3,7 +3,7 @@ import useRoutes from './routes';
 import {useAuth} from "./hooks/auth.hook";
 import {AuthContext} from "./context/AuthContext";
 import './App.css'
-import Nav from '../src/component/Nav/Nav'
+// import Nav from '../src/component/Nav/Nav'
 
 
 function App() {
@@ -14,12 +14,7 @@ function App() {
       <AuthContext.Provider value={{
         token, login, logout, userId, isAuthenticated
       }}>
-        <div className='container'>
-          {/* Крайне сомнительное решения */}
-          <>
-            <Nav />  
-          </>
-          
+        <div className='container'> 
           { routes }
         </div>
       </AuthContext.Provider>
