@@ -28,6 +28,29 @@ p {
 }
 
 
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.proloader-image {
+    width: 50px;
+    height: 50px;
+    animation: spin 5s linear 0s infinite;
+}
+
 
 /* -----------------------ScrollBar--------------------- */
 

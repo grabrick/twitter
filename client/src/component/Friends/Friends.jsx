@@ -3,9 +3,10 @@ import './Friends.css'
 import './Friends.scss'
 import FriendsRender from "./FriendsRender/FriendsRender";
 import { useDispatch, useSelector } from 'react-redux'
-import { renderFriendsActionCreator, changePageActionCreator } from '../../redux/friendsReducer'
+import { renderFriendsActionCreator, changePageActionCreator, toggleIsFetchingActionCreator } from '../../redux/friendsReducer'
 import { useEffect } from "react";
 import * as axios from 'axios'
+import Preloader from "../common/preloader/preloader";
 
 
 function Friends() {
@@ -26,11 +27,17 @@ function Friends() {
       dispatch(changePageActionCreator(numberPage))
     }
 
+    const toggleIsFetching = (isFetching) => {
+      dispatch(toggleIsFetchingActionCreator(isFetching))
+    }
+
     useEffect(() => {
         if(users.length === 0) {
+          toggleIsFetching(true)
             axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPage}&count=${pagesSize}`)
                 .then(res => {
                     renderFriends(res.data.items);
+                    toggleIsFetching(false)
                 })
                 
         }
@@ -47,14 +54,18 @@ function Friends() {
 
     const onChangePage = (pageNumber) => {
         changePage(pageNumber)
+        toggleIsFetching(true)
           axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${pagesSize}`)
               .then(res => {
                   renderFriends(res.data.items);
+                  toggleIsFetching(false)
               })
     }
 
     return (
+      <>
       <section className="friends__main_window">
+          {<Preloader />}
         <div className="friends__main_wrapper">
           <div className="friends__main_header">
               <p className="friends__main_header-text">Friends</p>
@@ -70,6 +81,7 @@ function Friends() {
           </div>
         </div>
       </section>
+      </>
     );
 }
 
