@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Avatar from "../common/Avatar/Avatar";  
 
 function TweetComponent(state) {
     const [count, setCount] = React.useState(6),
@@ -17,9 +18,7 @@ function TweetComponent(state) {
     <div className="tweet">
       <div className="tweet__header">
         <div className="tweet__header_element">
-          <NavLink to="/Profile/users">
-            <img src={state.Avatar} alt="avatar" className="tweet__header_img avatar" />
-          </NavLink>
+          <Avatar />
           <div className="tweet__header_element-text">
             <p className="tweet__header_element-title">{state.name}<span>{state.id} &middot;</span><span id="tweet__time">{state.lastTime}</span></p>
             <p className="tweet__header_element-subtitle">{state.text}</p>

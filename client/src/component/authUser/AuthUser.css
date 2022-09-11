@@ -1,13 +1,14 @@
 .auth {
     width: 1200px;
     height: 710px;
-    margin: 0 auto;
+    /* margin: 0 0 0 100px; */
+    margin: 0;
     background-color: white;
 }
 
 .auth__main_image {
-    height: 709px;
-    width: 600px;
+    height: 713px;
+    width: 700px;
     object-fit: cover;
 }
 
@@ -29,12 +30,22 @@
 
 .auth__main_input-text_wrapper {
     /* color: white; */
-    font-size: 40px;
-    font-weight: 500;
     margin: 100px 0 0 30px;
 }
 
+.auth__main_input-text {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.auth__main_input-title {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .auth__main_input-user_wrapper {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 
@@ -46,20 +57,56 @@
     margin-bottom: 20px;
 }
 
+.auth__main_input-btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
 .auth__main_input-password {
     width: 300px;
     height: 20px;
 }
 
 .auth__main_input-signup {
-    width: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 220px;
     height: 30px;
-    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+.auth__links_wrapper {
+    width: 370px;
+    height: 50px;
+}
+
+.auth__main_input-btn_wrapper-login {
+    margin-top: 100px;
+}
+
+.auth__main_text-login {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+#auth__links {
+    font-size: 12px;
+    color: #1DA1F2;
+    cursor: pointer;
+    padding: 0;
 }
 
 .auth__main_input-signin {
-    width: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 220px;
     height: 30px;
+}
+
+.auth__main_text-info {
+    font-size: 12px;
 }
 
 .auth__main_input-email_wrapper {

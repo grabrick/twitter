@@ -24,7 +24,7 @@ class authController {
                 })
             }
 
-            const { email, password } = req.body
+            const { name, bio, email, password } = req.body
 
 
             const candidate = await User.findOne({ email })
@@ -34,7 +34,7 @@ class authController {
 
 
             const hash = await bcrypt.hash(password, 4);
-            const user = new User({ email, password: hash})
+            const user = new User({name, bio, email, password: hash})
 
             await user.save()
 

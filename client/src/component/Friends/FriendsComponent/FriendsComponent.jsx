@@ -1,23 +1,32 @@
 import React from "react";
 import undefinedAvatar from '../../../images/users__avatar.svg'
-import {followActionCreator, unFollowActionCreator} from '../../../redux/friendsReducer'
-import { useDispatch, useSelector } from 'react-redux'
+// import {followActionCreator, unFollowActionCreator} from '../../../redux/friendsReducer'
+// import { useDispatch } from 'react-redux'
 // import { useEffect } from "react";
-// import * as axios from 'axios'
+import * as axios from 'axios'
 
 function FriendsComponent(state) {
 //   const friendList = useSelector((state) => state.userPage.friendList);
 
   // const userId = useSelector((state) => state.friends.friendsList);
-  const dispatch = useDispatch();
-  const onChangeFollow = (usersId) => {
-    dispatch(followActionCreator(usersId));
-  };
+
+  // const dispatch = useDispatch();
+  // const onChangeFollow = (usersId) => {
+  //   dispatch(followActionCreator(usersId));
+  // };
 
   const follow = "Follow";
   const unfollow = "Unfollow";
 
-
+  const getUsers = () => {
+    axios.get('/api/edit/profile')
+      .then((items) => {
+        console.log('data has been received', items.data)
+      })
+      .catch(() => {
+        console.log('error data')
+      })
+  }
 
   return (
     <>
@@ -39,7 +48,7 @@ function FriendsComponent(state) {
               <span className="friends__item_name-id">{state.usersId}</span>
             </h4>
           </div>
-          <button className="friends__item_btn" onClick={onChangeFollow}>
+          <button className="friends__item_btn" onClick={getUsers}>
             {state.followed === false ? follow : unfollow}
           </button>
         </div>

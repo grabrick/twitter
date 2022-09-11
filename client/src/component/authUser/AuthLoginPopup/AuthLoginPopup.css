@@ -1,0 +1,198 @@
+.popup__login {
+    position: fixed;
+    width: 100%;
+    height: 135%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    transition: opacity 500ms linear, visibility 0.5s linear;
+}
+
+.popup__login_opened {
+    display: flex;
+    visibility: visible;
+    transition: opacity 700ms linear, visibility 0s linear;
+}
+
+.auth__popup_login_container {
+    width: 400px;
+    height: 600px;
+}
+
+.auth__popup_register-wrapper {
+    display: flex;
+}
+
+.popup__button_login-save {
+    width: 300px;
+    height: 30px;
+    color: #000000;
+    background-color: #DDE1E1;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center; 
+    border: 1px solid #1F1F1F;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.popup__button_login-save:hover {
+    border: 2px solid #126FA4;
+    transition: linear 0.3s;
+    color: #FFFFFF;
+}
+
+.auth__popup_login-wrapp_fixed {
+
+}
+
+.auth__popup_wrapp-wrapper {
+    padding-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.auth__main_input-name {
+    width: 300px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+
+.popup__login_container-wrapper {
+    background-color: #DDE1E1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 15%);
+    /* padding: 0 15px; */
+    position: relative;
+    overflow: auto;
+}
+
+.auth__main_login-input__user_wrapper {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+/* text field */
+.text-field-login {
+    margin-bottom: 1rem;
+}
+
+.text-field__label-reg {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.text-field__input-login {
+    display: block;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.text-field__input-login[type="search"]::-webkit-search-decoration,
+.text-field__input-login[type="search"]::-webkit-search-cancel-button,
+.text-field__input-login[type="search"]::-webkit-search-results-button,
+.text-field__input-login[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.text-field__input-login::placeholder {
+    color: #1D9BF0;
+    opacity: 0.4;
+}
+
+.text-field__input-login:focus {
+    color: #1D9BF0;
+    background-color: #DDE1E1;
+    border-color: #1D9BF0;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25); */
+    box-shadow: 0 0 0 0.1rem rgba(29, 155, 240, 1);
+}
+
+.text-field__input-login:disabled,
+.text-field__input-login[readonly] {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
+
+/* with floating label */
+.text-field_floating-login {
+    position: relative;
+}
+
+.text-field_floating-login .text-field__input-login {
+    background-color: #DDE1E1;
+    height: calc(2.5rem + 2px);
+    padding: 0.5rem 0.75rem;
+}
+
+.text-field_floating-login .text-field__label-reg {
+    position: absolute;
+    top: 50%;
+    left: 0.3125rem;
+    display: flex;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: none;
+    background-color: #DDE1E1;
+    color: #1D9BF0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+}
+
+.text-field_floating-login .text-field__input-login::-moz-placeholder {
+    color: transparent;
+}
+
+.text-field_floating-login .text-field__input-login::placeholder {
+    color: transparent;
+}
+
+.text-field_floating-login .text-field__input-login:focus~.text-field__label-reg,
+.text-field_floating-login .text-field__input-login:not(:placeholder-shown)~.text-field__label-reg {
+    top: 0;
+    transform: translateY(-50%) scale(0.75);
+}
+
+.text-lable2 {
+    font-size: 12px;
+}
+
+.text__field_input {
+    width: 551px;
+
+}

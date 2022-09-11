@@ -20,7 +20,7 @@ function useRoutes(isAuthticated) {
 
               <Route path="/Message" element={<FeedMessage />} />
 
-              <Route path="/Profile/users" element={<ProfileSwitcher />} />
+              {/* <Route path="/Profile/users" element={<ProfileSwitcher />} /> */}
 
               <Route path="/Friends" element={<FeedFriends />} />
 
@@ -41,7 +41,7 @@ function useRoutes(isAuthticated) {
 
             <Route path="/Message" element={<Navigate to="/Auth" replace />} />
 
-            <Route path="/Profile/users" element={<Navigate to="/Auth" replace />} />
+            {/* <Route path="/Profile/users" element={<Navigate to="/Auth" replace />} /> */}
 
             <Route path="/Friends" element={<Navigate to="/Auth" replace />} />
 

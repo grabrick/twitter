@@ -61,11 +61,12 @@ function Friends() {
                   toggleIsFetching(false)
               })
     }
+    
 
     return (
       <>
       <section className="friends__main_window">
-          {<Preloader />}
+          <Preloader />
         <div className="friends__main_wrapper">
           <div className="friends__main_header">
               <p className="friends__main_header-text">Friends</p>

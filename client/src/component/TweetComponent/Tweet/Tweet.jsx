@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 
 function Tweet() {
   const tweet= useSelector(state => state.tweet.tweetData)
-  const tweetElement = tweet.map(tweet => <TweetComponent Avatar={TweetAvatar} name={tweet.name} id={tweet.id} lastTime='20s' text={tweet.text} tweetImage={tweet.tweetImage} />)
+  const tweetElement = tweet.map(tweet => <TweetComponent Avatar={tweet.Avatar} name={tweet.name} id={tweet.id} lastTime='20s' text={tweet.text} tweetImage={tweet.tweetImage} />)
 
   return (
     <>
