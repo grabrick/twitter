@@ -3,6 +3,10 @@ import CheckLine from "../../../../../images/check-line.svg"
 import './NavPopupComponent.css'
 
 function NavPopupComponent(state) {
+    const array = state.id
+    // const id = array.substring(0, 10)
+    const id = array.slice(0, 15)
+
     return (
         <>
           <div className="Nav__user_popup-wrapper">
@@ -14,7 +18,7 @@ function NavPopupComponent(state) {
               />
               <div className="Nav__user_popup-wrapper">
                 <p className="Nav__user_popup-name">{state.name}</p>
-                <span className="Nav__user_popup-id">{state.id}</span>
+                <span className="Nav__user_popup-id">@{id}</span>
               </div>
               <img src={CheckLine} alt="" className="Nav__user_popup-more" />
             </div>

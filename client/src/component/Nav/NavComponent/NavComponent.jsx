@@ -6,6 +6,8 @@ import NavProfilePopup from "../NavProfilePopup/NavProfilePopup";
 
 function NavComponent(state) {
   const [isPopup, setIsPopup] = useState(false);
+  const id = state.id
+  const splitID = id.slice(0, 15)
 
   const handlePopupClick = () => {
     setIsPopup("popupEdit");
@@ -21,7 +23,7 @@ function NavComponent(state) {
           />
           <div className="Nav__user_wrapper">
             <p className="Nav__user_name">{state.name}</p>
-            <span className="Nav__user_id">{state.id}</span>
+            <span className="Nav__user_id">@{splitID}</span>
           </div>
           <img src={MoreLine} alt="" className="Nav__user_more" />
         </div>

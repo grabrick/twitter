@@ -21,6 +21,7 @@ function FriendsComponent(state) {
   const getUsers = () => {
     axios.get('/api/edit/profile')
       .then((items) => {
+        debugger
         console.log('data has been received', items.data)
       })
       .catch(() => {
