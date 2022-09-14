@@ -1,11 +1,27 @@
 import { React, useState } from "react";
 import './ProfilePopup.css'
+import Intro from '../../../images/intro.svg'
+import Close from '../../../images/close.svg'
+import {useSelector} from 'react-redux'
 
 function ProfilePopup({close}) {
     const [popup] = useState(false);
 
     const inactive = "popup";
     const active = "popup_opened";
+
+    const photo = useSelector(state => state.tweet.tweetData)
+
+    const Avatar = photo.map((logo) => {
+      return (
+        <>
+          <div className="popup__close_btn">
+            <img src={Close} alt="" />
+          </div>
+          <img src={logo.Avatar} id="popup__photo" alt="" />
+        </>
+      );
+    })
 
 
 
@@ -37,6 +53,20 @@ function ProfilePopup({close}) {
               </div>
               <form className="popup__form" name="edit-Profile">
                 <div className="auth__main_input-user_wrapper">
+
+                  <div className="popup__photos_wrapper">
+                      <div className="popup__photos_wrapper-wrap">
+                        <div>
+                          <div className="popup__photo_delete">
+                                <img src={Close} alt="" />
+                          </div>
+                          <img src={Intro} className="popup__photos_backImage" alt="" />
+                        </div>
+                          <div className="popup__photo_wrapp">
+                            {Avatar}
+                          </div>
+                      </div>
+                  </div>
                   <div className="text-field2 text-field_floating-2 auth__main_input-email_wrapper">
                     <input
                       type="text"

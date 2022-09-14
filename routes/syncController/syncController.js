@@ -1,10 +1,16 @@
-const Profile = require('../../models/Profile')
+// const Profile = require('../../models/Profile')
+const User = require('../../models/User')
 
 class syncController {
     async sync(req, res) {
         try {
-            res.json({message: "bbbbgbgb"})
-            // const { name } = req.body
+            // const { email, name,  } = req.body
+
+            // const candidate = await Profile.findOne({ name })
+            
+            const candidate = await User.find({})
+
+            res.json({candidate})
         } catch (e) {
             res.json({message: 'error'})
         }   
