@@ -1,3 +1,5 @@
+const GET_PROFILE = 'GET-PROFILE'
+
 let initialState = {
     users: [
         {   
@@ -17,7 +19,15 @@ let initialState = {
 
 
 let profileUsersReducer = (state = initialState, action) => {
-    return state
+    switch(action.type) {
+        case GET_PROFILE:
+            return {
+                ...state, users: action.users
+            }
+
+        default: return state
+    }
 }
 
+export const getProfileActionCreator = (users) => ({type: GET_PROFILE, users: users})
 export default profileUsersReducer

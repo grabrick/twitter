@@ -7,8 +7,12 @@ import Arrow from '../../images/arrow.svg';
 import ProfileRender from '../Profile/ProfileRender/ProfileRender'
 import ProfilePopup from "../Profile/ProfilePopup/ProfilePopup";
 
+import { useDispatch } from 'react-redux'
+import * as axios from "axios";
+
 
 function Profile() {
+  const dispatch = useDispatch()
   const [isPopup, setIsPopup] = React.useState(false);
 
   const [show, setShow] = React.useState("Tweets")
@@ -32,6 +36,10 @@ function Profile() {
   const activeColor = "profile__main-btn_tweet-active";
 
   const inactiveColor = "profile__main-btn_tweet";
+
+  // const renderFriends = (user) => {
+  //   dispatch((user));
+  // }
 
   return (
     <section className='profile'>

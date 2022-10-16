@@ -1,5 +1,6 @@
 {
     "secret": "SECRET_BLYA",
     "port": "5000",
-    "mongoUrl": "mongodb+srv://grabrick:8j0fxcPcjWWngtrs@cluster0.rcbeq4t.mongodb.net/app?retryWrites=true&w=majority"
+    "mongoUrl": "mongodb+srv://grabrick:8j0fxcPcjWWngtrs@cluster0.rcbeq4t.mongodb.net/app?retryWrites=true&w=majority",
+    "staticPath": "C:\\Users\\tim\\Desktop\\twitter\\server\\static"
 }

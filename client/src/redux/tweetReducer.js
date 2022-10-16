@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_TWEET_TEXT = 'UPDATE-NEW-TWEET-TEXT'
+const DELETE_TWEET = 'DELETE-TWEET'
 
 const initialState = {
     tweetData: [
@@ -34,13 +35,19 @@ const tweetReducer = (state = initialState, action) => {
         case UPDATE_NEW_TWEET_TEXT:
             // state.newTweetText = action.newText;
             return {...state, newTweetText: action.newText};
+
+        case DELETE_TWEET: 
+            console.log(state.tweetData)
+            return {
+                ...state
+            }
         default:
             return state;
     }
 }
 
 export const addPostCreator = () => ({type: ADD_POST});
-
+export const deleteTweetCreator = (payload) => ({type: DELETE_TWEET, action: payload})
 export const updateTweetCreator = (text) => ({type: UPDATE_NEW_TWEET_TEXT, newText: text})
 
 export default tweetReducer;

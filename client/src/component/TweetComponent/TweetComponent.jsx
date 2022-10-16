@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "../common/Avatar/Avatar";
 import { NavLink } from "react-router-dom";
+import MenuPopup from "../common/MenuPopupState/MenuPopupState";
 
 function TweetComponent(state) {
     const [count, setCount] = React.useState(6),
@@ -15,24 +16,33 @@ function TweetComponent(state) {
     const isActiveLike = "tweet__element-feed_like-active";
 
     return (
-    <div className="tweet">
-      <div className="tweet__header">
-        <div className="tweet__header_element">
+      <div className="tweet">
+        <div className="tweet__header">
+          <div className="tweet__header-wrapp">
+            <div className="tweet__header_element">
               <NavLink to="/Profile">
                 <Avatar />
               </NavLink>
-          <div className="tweet__header_element-text">
-            <p className="tweet__header_element-title">{state.name}<span>{state.id} &middot;</span><span id="tweet__time">{state.lastTime}</span></p>
-            <p className="tweet__header_element-subtitle">{state.text}</p>
+              <div className="tweet__header_element-text">
+                <p className="tweet__header_element-title">
+                  {state.name}
+                  <span>{state.id} &middot;</span>
+                  <span id="tweet__time">{state.lastTime}</span>
+                </p>
+                <p className="tweet__header_element-subtitle">{state.text}</p>
+              </div>
+            </div>
+            <div className="tweet__header_more-popup_wrapper">
+              <MenuPopup />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="tweet__element_img">
-        <img src={state.tweetImage} alt='' className="tweet__image avatar" />
-      </div>
+        <div className="tweet__element_img">
+          <img src={state.tweetImage} alt="" className="tweet__image avatar" />
+        </div>
 
-      <div className="tweet__element_btn">
+        <div className="tweet__element_btn">
           <div className="tweet__element-feed_btn">
             <button className="tweet__element-feed_commit" id="commit">
               <svg
@@ -40,7 +50,8 @@ function TweetComponent(state) {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   className="btn__hover-commit"
                   d="M14.0459 2.24199L9.89795 2.23199H9.89595C5.52195 2.23199 2.09595 5.65899 2.09595 10.034C2.09595 14.132 5.28195 17.24 9.56095 17.404V21.232C9.56095 21.34 9.60495 21.518 9.68095 21.635C9.82295 21.86 10.0649 21.982 10.3129 21.982C10.4509 21.982 10.5899 21.944 10.7149 21.864C10.9789 21.696 17.1879 17.724 18.8029 16.358C20.7049 14.748 21.8429 12.388 21.8459 10.046V10.029C21.8399 5.66199 18.4159 2.24199 14.0459 2.24099V2.24199ZM17.8329 15.214C16.6989 16.174 12.9709 18.619 11.0609 19.857V16.67C11.0609 16.256 10.7259 15.92 10.3109 15.92H9.91495C6.25495 15.92 3.59695 13.444 3.59695 10.034C3.59695 6.49999 6.36495 3.73199 9.89695 3.73199L14.0439 3.74199H14.0459C17.5779 3.74199 20.3459 6.50799 20.3479 10.038C20.3449 11.948 19.4059 13.882 17.8339 15.214H17.8329Z"
@@ -67,12 +78,20 @@ function TweetComponent(state) {
                 />
               </svg>
             </button>
-            <p className="tweet__retweet_value" id="tweet-value">1</p>
+            <p className="tweet__retweet_value" id="tweet-value">
+              1
+            </p>
           </div>
 
           <div className="tweet__element-feed_btn">
-            <button className={like ? isActiveLike : inActiveLike} id="like" onClick={onLikeButtonClick}></button>
-            <p className="tweet__like_value" id="tweet-value">{count}</p>
+            <button
+              className={like ? isActiveLike : inActiveLike}
+              id="like"
+              onClick={onLikeButtonClick}
+            ></button>
+            <p className="tweet__like_value" id="tweet-value">
+              {count}
+            </p>
           </div>
 
           <div className="tweet__element-feed_btn">
@@ -98,8 +117,8 @@ function TweetComponent(state) {
             </button>
           </div>
         </div>
-    </div>
-    )
+      </div>
+    );
 }
 
 export default TweetComponent

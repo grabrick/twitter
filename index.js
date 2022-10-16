@@ -6,9 +6,10 @@ const PORT = config.get('port') || 5000
 
 
 app.use(express.json({ extended: true }))
-
+// app.use(express.static('static'))
 app.use('/api/auth', require('./routes/authRouter'))
 app.use('/api/edit', require('./routes/syncRouter'))
+// app.use('/api/post', require('./routes/fileRouter'))
 
 async function start() {
   try {

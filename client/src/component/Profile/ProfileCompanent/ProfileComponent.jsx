@@ -23,7 +23,7 @@ function ProfileComponent(state) {
       <div className="profile__main_subtitle">
         <div className="profile__main_element1">
           <p className="profile__main_name">{state.name}</p>
-          <span className="profile__main_login">{splitID}</span>
+          <span className="profile__main_login">@{splitID}</span>
         </div>
 
         <div className="profile__main_element2">

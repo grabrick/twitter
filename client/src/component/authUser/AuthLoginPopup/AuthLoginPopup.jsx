@@ -33,7 +33,7 @@ function AuthLoginPopup({close}) {
 
     return (
       <>
-        <div className={popup ? active : inactive} onClick={() => close(false)}>
+        <div className={popup ? active : inactive}>
           <div
             className="auth__popup_login_container"
             onClick={(e) => e.stopPropagation()}

@@ -1,37 +1,33 @@
 import { React, useState } from "react";
-import './ProfilePopup.css'
-import Intro from '../../../images/intro.svg'
-import Close from '../../../images/close.svg'
-import {useSelector} from 'react-redux'
+import "./ProfilePopup.css";
+import Intro from "../../../images/intro.svg";
+import Close from "../../../images/close.svg";
+import { useSelector } from "react-redux";
 
-function ProfilePopup({close}) {
-    const [popup] = useState(false);
+function ProfilePopup({ close }) {
+  const [popup] = useState(false);
 
-    const inactive = "popup";
-    const active = "popup_opened";
+  const inactive = "popup";
+  const active = "popup_opened";
 
-    const photo = useSelector(state => state.tweet.tweetData)
+  const photo = useSelector((state) => state.tweet.tweetData);
 
-    const Avatar = photo.map((logo) => {
-      return (
-        <>
-          <div className="popup__close_btn">
-            <img src={Close} alt="" />
-          </div>
-          <img src={logo.Avatar} id="popup__photo" alt="" />
-        </>
-      );
-    })
-
-
-
+  const Avatar = photo.map((logo) => {
     return (
       <>
-        <div className={popup ? active : inactive} onClick={() => close(false)}>
-          <div
-            className="popup__container"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="popup__close_btn">
+          <img src={Close} alt="" />
+        </div>
+        <img src={logo.Avatar} id="popup__photo" alt="" />
+      </>
+    );
+  });
+
+  return (
+    <>
+      <div className={popup ? active : inactive} onClick={() => close(false)}>
+        <div className="popup__container-edit" onClick={(e) => e.stopPropagation()}>
+        <form className="popup__form" name="edit-Profile">
             <div className="popup__container_wrapper">
               <div className="popup__wrapp_fixed">
                 <div className="popup__wraper">
@@ -51,129 +47,123 @@ function ProfilePopup({close}) {
                   />
                 </div>
               </div>
-              <form className="popup__form" name="edit-Profile">
-                <div className="auth__main_input-user_wrapper">
-
-                  <div className="popup__photos_wrapper">
-                      <div className="popup__photos_wrapper-wrap">
-                        <div>
-                          <div className="popup__photo_delete">
-                                <img src={Close} alt="" />
-                          </div>
-                          <img src={Intro} className="popup__photos_backImage" alt="" />
-                        </div>
-                          <div className="popup__photo_wrapp">
-                            {Avatar}
-                          </div>
+              <div className="auth__main_input-user_wrapper-edit">
+                <div className="popup__photos_wrapper">
+                  <div className="popup__photos_wrapper-wrap">
+                    <div>
+                      <div className="popup__photo_delete">
+                        <img src={Close} alt="" />
                       </div>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-email_wrapper">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Name
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="Bio"
-                      name="Bio"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Bio
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="Job"
-                      name="Job"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Job
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="Location"
-                      name="Location"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Location
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="BirthDate"
-                      name="BirthDate"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Birth date
-                    </label>
-                  </div>
-
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="BirthDate"
-                      name="BirthDate"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Birth date
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="BirthDate"
-                      name="BirthDate"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Birth date
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="BirthDate"
-                      name="BirthDate"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Birth date
-                    </label>
-                  </div>
-                  <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
-                    <input
-                      type="text"
-                      id="BirthDate"
-                      name="BirthDate"
-                      className="text-field__input2 text__field_input"
-                    />
-                    <label className="text-field__label2 text-lable2">
-                      Birth date
-                    </label>
+                      <img
+                        src={Intro}
+                        className="popup__photos_backImage"
+                        alt=""
+                      />
+                    </div>
+                    <div className="popup__photo_wrapp">{Avatar}</div>
                   </div>
                 </div>
-              </form>
+                <div className="text-field2 text-field_floating-2 auth__main_input-email_wrapper">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">Name</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Bio"
+                    name="Bio"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">Bio</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Job"
+                    name="Job"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">Job</label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="Location"
+                    name="Location"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Location
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+                <div className="text-field2 text-field_floating-2 auth__main_input-password_wrapper">
+                  <input
+                    type="text"
+                    id="BirthDate"
+                    name="BirthDate"
+                    className="text-field__input2 text__field_input-profile"
+                  />
+                  <label className="text-field__label2 text-lable2">
+                    Birth date
+                  </label>
+                </div>
+              </div>
             </div>
-          </div>
+            </form>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
 
 export default ProfilePopup;

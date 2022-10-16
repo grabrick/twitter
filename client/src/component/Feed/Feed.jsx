@@ -7,6 +7,7 @@ import Tweet from '../TweetComponent/Tweet/Tweet';
 import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import FeedRender from './FeedRender/FeedRender';
+import * as axios from 'axios'
 
 function Feed() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function Feed() {
 
   let addPost = () => {
     dispatch(addPostCreator());
-  }
+  };
 
   let onPostChange = (e) => {
     let text = e.target.value;
