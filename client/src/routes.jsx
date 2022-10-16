@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import FeedHome from '../src/component/Pages/FeedHome/FeedHome';
 import FeedProfile from '../src/component/Pages/FeedProfile/FeedProfile';
 import FeedMessage from '../src/component/Pages/FeedMessage/FeedMessage'
-import ProfileSwitcher from '../src/component/Pages/FeedProfile/ProfileSwitcher/ProfileSwitcher';
+// import ProfileSwitcher from '../src/component/Pages/FeedProfile/ProfileSwitcher/ProfileSwitcher';
 import FeedFriends from '../src/component/Pages/FeedFriends/FeedFriends';
 import FeedAuth from '../src/component/Pages/FeedAuth/FeedAuth'
 
