@@ -86,6 +86,7 @@
 .friends__main_pages { 
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
 }
 
 .friends__main_wrapper {

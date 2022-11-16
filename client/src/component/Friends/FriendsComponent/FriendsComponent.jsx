@@ -3,7 +3,7 @@ import undefinedAvatar from '../../../images/users__avatar.svg'
 // import {followActionCreator, unFollowActionCreator} from '../../../redux/friendsReducer'
 // import { useDispatch } from 'react-redux'
 // import { useEffect } from "react";
-import * as axios from 'axios'
+import axios from 'axios'
 
 function FriendsComponent(state) {
 //   const friendList = useSelector((state) => state.userPage.friendList);

@@ -5,14 +5,12 @@ import FriendsRender from "./FriendsRender/FriendsRender";
 import { useDispatch, useSelector } from 'react-redux'
 import { renderFriendsActionCreator, changePageActionCreator, toggleIsFetchingActionCreator } from '../../redux/friendsReducer'
 import { useEffect } from "react";
-import * as axios from 'axios'
+import axios from 'axios'
 import Preloader from "../common/preloader/preloader";
 
 
 function Friends() {
     const activePage = "active__color_page"
-
-
     const dispatch = useDispatch();
     const users = useSelector((state) => state.friends.friendsList);
     const totalUsersCount = useSelector((state) => state.friends.totalUsersCount);

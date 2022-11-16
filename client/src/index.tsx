@@ -18,7 +18,9 @@ const theme = createTheme({
     }
 })
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+// ReactDOM.createRoot(<App />, document.getElementById('root'))
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <Provider store={store}>
         <React.StrictMode>

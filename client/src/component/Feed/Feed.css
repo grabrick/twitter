@@ -2,6 +2,7 @@
     border-left: 0.5px solid #EBEEF0;
     border-right: 0.5px solid #EBEEF0;
     margin-left: 209px;
+    min-width: 600px;
 }
 
 .feed__header {
