@@ -11,13 +11,13 @@ function MessageMain () {
     const dispatch = useDispatch()
 
     let onSendMessage = () => {
-        dispatch(sendMessageCreator())
-    }
+      dispatch(sendMessageCreator());
+    };
 
     let onMessageChange = (e) => {
-        let body = e.target.value;
-        dispatch(updateMessageTextCreator(body))
-    }
+      let body = e.target.value;
+      dispatch(updateMessageTextCreator(body));
+    };
 
     return (
       <div className="messages__main">

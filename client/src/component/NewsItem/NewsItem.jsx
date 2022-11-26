@@ -33,7 +33,7 @@ function NewsItem() {
     <section className="News">
         <div className="News__search-bar">
             <img src={loupe} alt="loupe" className="News__img" />
-            <input type="text" className="News__search" placeholder="Search Twitter" value={searchQuery} required onChange={e => setSearchQuery(e.target.value)} />
+            <input type="text" className="News__search" placeholder="Search Twitter" value={searchQuery} required onChange={e => console.log(e.target.value)} />
         </div>
         <div className="News__popular-info">
             <h1 className="News__popular-title">Trends for you</h1>

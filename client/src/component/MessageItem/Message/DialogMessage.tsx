@@ -6,8 +6,7 @@ import { IMessage } from "../../../types/types";
 
 const DialogMessage: FC<IMessage> = () => {
     const dialogs = useAppSelector(state => state.message.messageDialog)
-    const DialogElement = dialogs.map(dialogs =>  <DialogComponent message={dialogs.message} />)
-    console.log(dialogs);
+    const DialogElement = dialogs.map((dialogs:{message: string}) =>  <DialogComponent message={dialogs.message} />)
     return (
         <>
             { DialogElement }   

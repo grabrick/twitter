@@ -176,3 +176,29 @@
     display: flex;
     font-size: 15px;
 }
+
+.messages__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 615px;
+    /* margin-left: 250px;
+    padding-top: 250px; */
+}
+
+.messages__intro {
+    /* background-color: green; */
+    width: 300px;
+    height: 100px;
+}
+
+.messages__intro_text {
+    padding: 0;
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #EBEEF0;
+}

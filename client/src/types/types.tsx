@@ -1,4 +1,4 @@
-export interface IFPhoto {
+type FPhoto = {
     large?: string,
     small?: string  
 }
@@ -7,7 +7,7 @@ export interface IFriends {
     name: string,
     id: number,
     followed: boolean,
-    photo: IFPhoto,
+    photo: FPhoto,
 }
 
 export interface ITweet {
@@ -47,4 +47,21 @@ export interface ISFriends {
     totalUsersCount: number,
     currentPage: number,
     isFetching: boolean
+}
+
+export interface IProfile {
+    users: [
+        {   
+            name: string,
+            id: string,
+            photo: string,
+            backImage: string,
+            job: string,
+            bio: string,
+            location: string,
+            hbInfo: string,
+            following: number,
+            followers: number
+        }
+    ]
 }

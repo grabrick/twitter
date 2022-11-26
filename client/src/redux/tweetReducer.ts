@@ -21,11 +21,13 @@ const initialState: ITweet = {
 const tweetReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case ADD_POST:
-      // let newPost = {
-      //   id: "@ggrrht",
-      //   name: "Kirill",
-      //   text: state.newTweetText,
-      // };
+      let newPost = {
+        id: "@ggrrht",
+        name: "Kirill",
+        text: state.newTweetText,
+        avatar: '',
+        image: ''
+      };
 
       // state.tweetData.push(newPost);
       // state.newTweetText = '';
@@ -33,7 +35,7 @@ const tweetReducer = (state = initialState, action: any) => {
 
       return {
         ...state,
-        // tweetData: [...state.tweetData, newPost],
+        tweetData: [...state.tweetData, newPost],
         newTweetText: "",
       };
     case UPDATE_NEW_TWEET_TEXT:
@@ -41,7 +43,6 @@ const tweetReducer = (state = initialState, action: any) => {
       return { ...state, newTweetText: action.newText };
 
     case DELETE_TWEET:
-      console.log(state.tweetData);
       return {
         ...state,
       };
