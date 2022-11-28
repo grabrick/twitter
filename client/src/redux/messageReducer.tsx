@@ -16,7 +16,7 @@ const initialState: IMessage = {
         ],
         messageDialog: [
             {
-                message: '',
+                message: 'dcdcd',
 
             }
         ],
@@ -27,13 +27,13 @@ const messageReducer = (state = initialState, action: any) => {
     switch(action.type) {
         case SEND_MESSAGE:
             let body = {
-                // message: state.newMessageBody
+                message: state.newMessageBody
             };
 
             return {
                 ...state,
                 newMessageBody: '',
-                // messageDialog: [...state.messageDialog, body],
+                messageDialog: [...state.messageDialog, body],
             };
 
         case UPDATE_NEW_MESSAGE_TEXT:

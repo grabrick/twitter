@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import avatar from "../../../../../images/image__peple.svg";
 
 function DialogComponent(state) {
-  // console.log(state.message.length);
-  const intro = (state) => {
-    if (state.message.length <= 0) {
+  console.log(state.message.value);
+  const intro = () => {
+    if (state.message.length === 0) {
       return (
         <div className="messages__container">
           <div className="messages__intro">

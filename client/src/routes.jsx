@@ -8,7 +8,7 @@ import FeedFriends from '../src/component/Pages/FeedFriends/FeedFriends';
 import FeedAuth from '../src/component/Pages/FeedAuth/FeedAuth'
 
 function useRoutes(isAuthticated) {
-    if(isAuthticated) {
+    if(!isAuthticated) {
         return (
           <div className="page">
             <Routes>

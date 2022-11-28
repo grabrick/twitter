@@ -1,15 +1,6 @@
-type news = {
-    newsData: [
-        {title: string, subtitle: string, tags: string},
-        {title: string, subtitle: string, tags: string},
-        {title: string, subtitle: string, tags: string},
-        {title: string, subtitle: string, tags: string},
-        {title: string, subtitle: string, tags: string},
-        {title: string, subtitle: string, tags: string},
-    ]
-}
+import { INews } from "../types/types"
 
-const initialState: news = {
+const initialState: INews = {
     newsData: [
         {
             title: 'Trending in Kazakhstan',

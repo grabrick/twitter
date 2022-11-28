@@ -3,6 +3,39 @@ type FPhoto = {
     small?: string  
 }
 
+type TweetItem = {
+    avatar: string,
+    name: string,
+    id: string,
+    text: string,
+    image: string
+}
+
+type CatalogItem = {
+    name: string,
+    userId: string,
+    lastMessage: string,
+}
+
+type DialogItem = {
+    message: string
+}
+
+type newsItem = {
+        title: string, 
+        subtitle: string, 
+        tags: string
+}
+
+export interface INews {
+    newsData: newsItem[]
+}
+
+export interface ITweet {
+    tweetData: TweetItem[],
+    newTweetText: string
+}
+
 export interface IFriends {
     name: string,
     id: number,
@@ -10,34 +43,9 @@ export interface IFriends {
     photo: FPhoto,
 }
 
-export interface ITweet {
-    tweetData: [
-        {
-            avatar: string,
-            name: string,
-            id: string,
-            text: string,
-            image: string
-        }
-    ],
-    newTweetText: string
-}
-
 export interface IMessage {
-    messageCatalog: [
-        {
-            name: string,
-            userId: string,
-            lastMessage: string,
-
-        }
-    ],
-    messageDialog: [
-        {
-            message: string,
-
-        }
-    ],
+    messageCatalog: CatalogItem[]
+    messageDialog: DialogItem[]
     newMessageBody: string
 }
 
