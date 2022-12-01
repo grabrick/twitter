@@ -1,48 +1,34 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import '../NewsItem/News/News.css'
 import loupe from '../../images/loops.svg'
-import NewsComponent from "./News/NewsComponent/NewsComponent";
-import { useEffect } from "react";
-// import News from "./News/News";
+import News from "./News/News";
+import { useSelector } from "react-redux";
 
-
-function NewsItem() {
+const NewsItem = () => {
     const news = useSelector(state => state.news.newsData)
-    const [searchQuery, setSearchQuery] = useState('')
 
-    const filterNews = (searchText, listOfText) => {
-        if(!searchText) {
-            return listOfText
+    const moreNews = () => {
+        if (news.length >= 7) {
+            return (
+              <div className="News__popular_more">
+                <p className="News__popular_more-text">Show more</p>
+              </div>
+            );
         }
-        return listOfText.filter(({subtitle}) => {
-            return subtitle.toLowerCase().includes(searchText.toLowerCase())
-        })
     }
-
-    useEffect(() => {
-        const Debounce = setTimeout(() => {
-            const Filter = filterNews(searchQuery);
-            setSearchQuery( Filter)
-        }, 300)
-
-        return () => clearTimeout(Debounce)
-    }, [searchQuery])
 
     return(
     <section className="News">
         <div className="News__search-bar">
             <img src={loupe} alt="loupe" className="News__img" />
-            <input type="text" className="News__search" placeholder="Search Twitter" value={searchQuery} required onChange={e => console.log(e.target.value)} />
+            <input type="text" className="News__search" placeholder="Search Twitter" required />
         </div>
         <div className="News__popular-info">
             <h1 className="News__popular-title">Trends for you</h1>
             <div className="News__popular-wrapper">
-                {news.map(news => {
-                    return <NewsComponent title={news.title} subtitle={news.subtitle} tags={news.tags}/>
-                })}
-                {/* <News /> */}
+                <News />
             </div>
+                { moreNews() }
         </div>
     </section>
     )

@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import avatar from "../../../../../images/image__peple.svg";
 
 function DialogComponent(state) {
-  console.log(state.message.value);
+  const message = useSelector(state => state.message.messageDialog)
+
   const intro = () => {
-    if (state.message.length === 0) {
-      return (
-        <div className="messages__container">
-          <div className="messages__intro">
-            <p className="messages__intro_text">There hasn't been a dialogue yet</p>
+    if (message.length > 0) {
+        return (
+          <div className="messages__container">
+            <div className="messages__intro">
+              <p className="messages__intro_text">There hasn't been a dialogue yet</p>
+            </div>
           </div>
-        </div>
-      )
+        )
     } else {
       return (
         <div className="messages__outer">
@@ -40,7 +42,7 @@ function DialogComponent(state) {
       );
     }
   };
-  return <div className="messages">{intro(state)}</div>;
+  return <div className="messages">{intro()}</div>;
 }
 
 export default DialogComponent;

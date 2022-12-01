@@ -6,25 +6,19 @@ const SEND_MESSAGE = 'SEND-MESSAGE'
 
 
 const initialState: IMessage = {
-        messageCatalog: [
-            {
-                name: 'Elena',
-                userId: '@fffhrjkc',
-                lastMessage: 'Hi',
-
-            }
-        ],
-        messageDialog: [
-            {
-                message: 'dcdcd',
-
-            }
-        ],
+    messageCatalog: [
+        {
+            name: 'Elena',
+            userId: '@fffhrjkc',
+            lastMessage: 'Hi',
+        }
+    ],
+    messageDialog: [],
     newMessageBody: ''
 };
 
 const messageReducer = (state = initialState, action: any) => {
-    switch(action.type) {
+    switch (action.type) {
         case SEND_MESSAGE:
             let body = {
                 message: state.newMessageBody
@@ -37,14 +31,14 @@ const messageReducer = (state = initialState, action: any) => {
             };
 
         case UPDATE_NEW_MESSAGE_TEXT:
-            return {...state, newMessageBody: action.body};
+            return { ...state, newMessageBody: action.body };
         default:
             return state;
     }
 }
 
-export const sendMessageCreator = () => ({type: SEND_MESSAGE});
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
 
-export const updateMessageTextCreator = (body: PayloadAction<string>) => ({type: UPDATE_NEW_MESSAGE_TEXT, body: body})
+export const updateMessageTextCreator = (body: PayloadAction<string>) => ({ type: UPDATE_NEW_MESSAGE_TEXT, body: body })
 
 export default messageReducer;

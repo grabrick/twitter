@@ -20,11 +20,11 @@ type CatalogItem = {
 type DialogItem = {
     message: string
 }
-
-type newsItem = {
-        title: string, 
-        subtitle: string, 
-        tags: string
+ 
+export type newsItem = {
+    title: string,
+    subtitle: string,
+    tags: number
 }
 
 export interface INews {

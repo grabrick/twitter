@@ -35,7 +35,7 @@
 .News__popular-info {
     background-color: #F7F9FA;
     width: 350px;
-    max-height: 800px;
+    min-height: 540px;
     border-radius: 15px;
 }
 
@@ -60,9 +60,13 @@
     transition: linear 0.3s;
 }
 
+.News__popular-element:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
 .News__popular-wrapper {
     width: 350px;
-    max-height: 800px;
+    /* max-height: 800px; */
     display: flex;
     align-self: flex-end;
     align-items: center;
@@ -99,4 +103,25 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 17px;
+}
+
+.News__popular_more {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 0 0 10px 10px;
+}
+
+.News__popular_more:hover {
+    background-color: #EBEEF0;
+    transition: linear 0.3s;
+}
+
+.News__popular_more-text {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1C93E4;
 }
