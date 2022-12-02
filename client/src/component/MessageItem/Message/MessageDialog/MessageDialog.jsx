@@ -3,8 +3,8 @@ import '../MessageDialog/MessageDialog.css'
 import avatar from '../../../../images/image__peple.svg'
 import info from '../../../../images/information-line.svg'
 import { sendMessageCreator, updateMessageTextCreator } from '../../../../redux/messageReducer';
-import DialogMessage from '../DialogMessage'
 import { useDispatch, useSelector } from 'react-redux'
+import DialogComponent from './DialogComponent/DialogComponent';
 
 function MessageMain () {
     const messageBody = useSelector(state => state.message.newMessageBody)
@@ -33,7 +33,7 @@ function MessageMain () {
         </div>
 
         <div className="messages__main_window">
-          <DialogMessage/>
+          <DialogComponent />
         </div>
 
           <div className="messages__main_input">
