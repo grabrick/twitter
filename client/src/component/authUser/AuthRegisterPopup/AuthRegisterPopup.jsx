@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import './AuthRegisterPopup.css'
 import { useHttp } from "../../../hooks/http.hook";
 
-function AuthRegisterPopup({close}) {
+// type Form = {
+//   name: string,
+//   bio: string,
+//   email: string,
+//   password: string,
+// }
+
+const AuthRegisterPopup = close => {
     const [popup] = useState(false);
     const {loading, request} = useHttp()
     const [form, setForm] = useState({
@@ -12,7 +19,7 @@ function AuthRegisterPopup({close}) {
       password: "",
     });
 
-    const changeHandler = event => {
+    const changeHandler = (event) => {
         setForm({...form, [event.target.name]: event.target.value})
     }
 

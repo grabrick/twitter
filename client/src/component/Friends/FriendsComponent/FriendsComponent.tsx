@@ -5,7 +5,7 @@ import undefinedAvatar from '../../../images/users__avatar.svg'
 // import { useEffect } from "react";
 import axios from 'axios'
 
-function FriendsComponent(state) {
+function FriendsComponent(state: any) {
 //   const friendList = useSelector((state) => state.userPage.friendList);
 
   // const userId = useSelector((state) => state.friends.friendsList);
@@ -46,7 +46,7 @@ function FriendsComponent(state) {
           <div className="friends__item_wrapper">
             <h4 className="friends__item__name">
               {state.name}
-              <span className="friends__item_name-id">{state.usersId}</span>
+              <span className="friends__item_name-id">{state.userId}</span>
             </h4>
           </div>
           <button className="friends__item_btn" onClick={getUsers}>

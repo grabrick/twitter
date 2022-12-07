@@ -1,16 +1,17 @@
-import { React, useState } from "react";
+import { FC, useState } from "react";
 import "./ProfilePopup.css";
 import Intro from "../../../images/intro.svg";
 import Close from "../../../images/close.svg";
-import { useSelector } from "react-redux";
+import { close } from "../../../types/types";
+import { useAppSelector } from "../../../hooks/redux.hook";
 
-function ProfilePopup({ close }) {
+
+const ProfilePopup: FC<close> = ({ close }: any) => {
+  const photo = useAppSelector((state) => state.tweet.tweetData);
   const [popup] = useState(false);
 
   const inactive = "popup";
   const active = "popup_opened";
-
-  const photo = useSelector((state) => state.tweet.tweetData);
 
   const Avatar = photo.map((logo) => {
     return (
@@ -18,7 +19,7 @@ function ProfilePopup({ close }) {
         <div className="popup__close_btn">
           <img src={Close} alt="" />
         </div>
-        <img src={logo.Avatar} id="popup__photo" alt="" />
+        <img src={logo.avatar} id="popup__photo" alt="" />
       </>
     );
   });
@@ -27,7 +28,7 @@ function ProfilePopup({ close }) {
     <>
       <div className={popup ? active : inactive} onClick={() => close(false)}>
         <div className="popup__container-edit" onClick={(e) => e.stopPropagation()}>
-        <form className="popup__form" name="edit-Profile">
+          <form className="popup__form" name="edit-Profile">
             <div className="popup__container_wrapper">
               <div className="popup__wrapp_fixed">
                 <div className="popup__wraper">
@@ -159,7 +160,7 @@ function ProfilePopup({ close }) {
                 </div>
               </div>
             </div>
-            </form>
+          </form>
         </div>
       </div>
     </>

@@ -1,14 +1,15 @@
-import React from "react";
+import React, {FC} from "react";
 import ProfileComponent from "../ProfileCompanent/ProfileComponent";
 import { useAppSelector } from "../../../hooks/redux.hook";
+import { IProfile } from "../../../types/types";
 
-function ProfileRender() {
+const ProfileRender: FC<IProfile> = () => {
   const Profile = useAppSelector(state => state.profileUsers.users);
 
   const profileElement = Profile.map((usersProfile:
-    { name: string, id: string, photo?: string, backImage?: string, bio?: string, job: string, location: string, hbInfo: string, following: number, followers: number }
+    { name: string, id: string, photo: string, backImage: string, bio: string, job: string, location: string, hbInfo: string, following: number, followers: number, }
   ) => (
-    <ProfileComponent
+    <ProfileComponent      
       name={usersProfile.name}
       id={usersProfile.id}
       photo={usersProfile.photo}

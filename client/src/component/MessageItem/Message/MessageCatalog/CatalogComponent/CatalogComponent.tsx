@@ -1,7 +1,8 @@
 import React from "react";
 import picture from '../../../../../images/image__peple.svg'
+import { CatalogItem } from "../../../../../types/types";
 
-function CatalogComponent(state) {
+function CatalogComponent(state: CatalogItem) {
     return (
     <div className="message__profile">
         <img src={picture} alt="" className='message__picture' />

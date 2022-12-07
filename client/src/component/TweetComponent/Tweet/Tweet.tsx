@@ -4,8 +4,6 @@ import TweetComponent from "../TweetComponent";
 import { useAppSelector } from "../../../hooks/redux.hook";
 import { ITweet } from "../../../types/types";
 
-// нужно зафиксть твиты, ломается логика добавления постов
-
 const Tweet: FC<ITweet> = () => {
   const tweet = useAppSelector(state => state.tweet.tweetData)
   const tweetElement = tweet.map(tweet =>

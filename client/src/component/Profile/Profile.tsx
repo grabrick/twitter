@@ -1,21 +1,22 @@
-import React from "react";
+import React, { FC } from "react";
 import '../Profile/Profile.css';
 import Intro from '../../images/intro.svg';
 // import Avatar from '../../images/Avatar.svg';
 import Arrow from '../../images/arrow.svg';
 // import Tweet from "../TweetComponent/Tweet/Tweet";
-import ProfileRender from '../Profile/ProfileRender/ProfileRender'
-import ProfilePopup from "../Profile/ProfilePopup/ProfilePopup";
+import ProfileRender from './ProfileRender/ProfileRender'
+import ProfilePopup from "./ProfilePopup/ProfilePopup";
+import { close } from "../../types/types";
 
-import { useDispatch } from 'react-redux'
-import * as axios from "axios";
+// import { useDispatch } from 'react-redux'
+// import * as axios from "axios";
 
 
-function Profile() {
-  const dispatch = useDispatch()
-  const [isPopup, setIsPopup] = React.useState(false);
+const Profile: FC<close> = () => {
+  // const dispatch = useDispatch()
+  const [isPopup, setIsPopup] = React.useState<boolean>(false);
 
-  const [show, setShow] = React.useState("Tweets")
+  const [show, setShow] = React.useState<string>("Tweets")
 
   const handleTweetsClick = () => {
       setShow("Tweets");
@@ -56,7 +57,7 @@ function Profile() {
           <div className="profile__main_profile">
             <img src={Intro} alt="intro" className="profile__main_intro" />
             
-            <ProfileRender />
+            <ProfileRender users={[]} />
 
             <div className="profile__main-btn_tweets">
               <button className={show === "Tweets" ? activeColor : inactiveColor} onClick={handleTweetsClick}>
@@ -80,7 +81,7 @@ function Profile() {
             {/* {show === "Tweets" && (<Tweet/> )} */}
           </div>
         </div>
-        {isPopup === "popupEdit" && <ProfilePopup close={setIsPopup} />}  
+        {isPopup && <ProfilePopup close={() => setIsPopup(false)} />}  
     </section>
   );
 }

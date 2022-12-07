@@ -3,18 +3,18 @@ import '../MessageDialog/MessageDialog.css'
 import avatar from '../../../../images/image__peple.svg'
 import info from '../../../../images/information-line.svg'
 import { sendMessageCreator, updateMessageTextCreator } from '../../../../redux/messageReducer';
-import { useDispatch, useSelector } from 'react-redux'
 import DialogComponent from './DialogComponent/DialogComponent';
+import { useAppDispatch, useAppSelector } from '../../../../hooks/redux.hook';
 
-function MessageMain () {
-    const messageBody = useSelector(state => state.message.newMessageBody)
-    const dispatch = useDispatch()
+const MessageMain = () => {
+    const messageBody = useAppSelector(state => state.message.newMessageBody)
+    const dispatch = useAppDispatch()
 
     let onSendMessage = () => {
       dispatch(sendMessageCreator());
     };
 
-    let onMessageChange = (e) => {
+    let onMessageChange = (e: any) => {
       let body = e.target.value;
       dispatch(updateMessageTextCreator(body));
     };
@@ -33,7 +33,7 @@ function MessageMain () {
         </div>
 
         <div className="messages__main_window">
-          <DialogComponent />
+          <DialogComponent messageCatalog={[]} messageDialog={[]} newMessageBody={''} />
         </div>
 
           <div className="messages__main_input">

@@ -9,10 +9,10 @@ import './MenuPopupState.css'
 import { useDispatch } from "react-redux";
 import {deleteTweetCreator} from '../../../redux/tweetReducer'
 
-export default function MenuPopupState() {
+export const MenuPopupState = () => {
   const dispatch = useDispatch()
 
-  const onClickDeleteTweet = (id) => {
+  const onClickDeleteTweet = (id: any) => {
     dispatch(deleteTweetCreator(id))
   }
   return (

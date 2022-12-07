@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { ProfileItem } from "../../../types/types";
 import ProfilePopup from "../ProfilePopup/ProfilePopup";
 
 
-function ProfileComponent(state) {
-  const [isPopup, setIsPopup] = useState(false);
-  const id = state.id
-  const splitID = id.slice(0, 15)
+function ProfileComponent(state: ProfileItem) {
+  const [isPopup, setIsPopup] = useState<boolean>(false);
+  const id = state.id;
+  const splitID = id.slice(0, 15);
 
   const handlePopupClick = () => {
-    setIsPopup("popupEdit");
+    setIsPopup(true);
   };
 
   return (
@@ -43,7 +44,7 @@ function ProfileComponent(state) {
             <span className="profile__main-Followers_span">Followers</span>
           </p>
         </div>
-        {isPopup === "popupEdit" && <ProfilePopup close={setIsPopup} />}
+        {isPopup && <ProfilePopup close={() => setIsPopup(false)} />}
       </div>
     </div>
   );

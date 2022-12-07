@@ -1,15 +1,15 @@
-import { useSelector } from "react-redux";
-import { React } from "react";
+import { FC } from "react";
+import { useAppSelector } from "../../../../hooks/redux.hook";
 
-function NavLogoutRender() {
+const NavLogoutRender: FC = () => {
     //     const userId = useSelector(state => state.profileUsers.users)
     // const array = userId
     // const id = array.slice(0, 15).map((id) => {
     //     return <span>{id.id}</span>
     // })
 
-    const userId = useSelector(state => state.profileUsers.users)
-        .map((id) => {
+    const userId = useAppSelector(state => state.profileUsers.users)
+        .map((id: { id: string }) => {
             return <span>@{id.id.slice(0, 15)}</span>
         })
     return (

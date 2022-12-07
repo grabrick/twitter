@@ -3,7 +3,13 @@ type FPhoto = {
     small?: string  
 }
 
-type TweetItem = {
+export type close = {
+    close: () => void
+}
+
+
+
+export type TweetItem = {
     avatar: string,
     name: string,
     id: string,
@@ -11,10 +17,17 @@ type TweetItem = {
     image: string
 }
 
-type CatalogItem = {
+export type CatalogItem = {
     name: string,
     userId: string,
     lastMessage: string,
+}
+
+export type SmallPopup = {
+    name: string, 
+    photo: string, 
+    id: string
+    close?: close
 }
 
 type DialogItem = {
@@ -25,6 +38,24 @@ export type newsItem = {
     title: string,
     subtitle: string,
     tags: number
+}
+ 
+export type ProfileItem = {
+    name: string,
+    id: string,
+    photo: string,
+    backImage: string,
+    job: string,
+    bio: string,
+    location: string,
+    hbInfo: string,
+    following: number,
+    followers: number,
+    close?: close
+}
+
+export type NavPopup = {
+    close?: close
 }
 
 export interface INews {
@@ -58,18 +89,5 @@ export interface ISFriends {
 }
 
 export interface IProfile {
-    users: [
-        {   
-            name: string,
-            id: string,
-            photo: string,
-            backImage: string,
-            job: string,
-            bio: string,
-            location: string,
-            hbInfo: string,
-            following: number,
-            followers: number
-        }
-    ]
+    users: ProfileItem[]
 }

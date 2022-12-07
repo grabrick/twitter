@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import MoreLine from "../../../images/more-line.svg"
+import { SmallPopup } from "../../../types/types";
 import NavProfilePopup from "../NavProfilePopup/NavProfilePopup";
 
 
 
-function NavComponent(state) {
+const NavComponent = (state: SmallPopup) => {
   const [isPopup, setIsPopup] = useState(false);
   const id = state.id
   const splitID = id.slice(0, 15)
 
   const handlePopupClick = () => {
-    setIsPopup("popupEdit");
+    setIsPopup(true);
   };
   return (
     <>
@@ -28,7 +29,7 @@ function NavComponent(state) {
           <img src={MoreLine} alt="" className="Nav__user_more" />
         </div>
       </div>
-      {isPopup === "popupEdit" && <NavProfilePopup close={setIsPopup} />}
+      {isPopup && <NavProfilePopup close={() => setIsPopup(false)} />}
     </>
   );
 }

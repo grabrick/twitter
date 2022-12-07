@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './Feed.css';
 import Tweet from '../TweetComponent/Tweet/Tweet';
 // import btnImg from '../../images/btn__img.svg';
 // import btnGif from '../../images/btn__gif.svg'
 // import btnEmoji from '../../images/btn__emoji.svg'
 import { addPostCreator, updateTweetCreator } from '../../redux/tweetReducer';
-import { useDispatch, useSelector } from 'react-redux';
 import FeedRender from './FeedRender/FeedRender';
-import * as axios from 'axios'
+// import * as axios from 'axios'
+import { useAppDispatch, useAppSelector } from '../../hooks/redux.hook';
 
-function Feed() {
-  const dispatch = useDispatch();
-  const newTweetText = useSelector(state => state.tweet.newTweetText);
+const Feed: FC = () => {
+  const dispatch = useAppDispatch();
+  const newTweetText = useAppSelector(state => state.tweet.newTweetText);
   // const newTweetImage = useSelector(state => state.tweet.newTweetText)
 
   let addPost = () => {
     dispatch(addPostCreator());
   };
 
-  let onPostChange = (e) => {
+  let onPostChange = (e: any) => {
     let text = e.target.value;
     let action = updateTweetCreator(text);
     dispatch(action);
@@ -61,7 +61,7 @@ function Feed() {
         <div className="feed__bar"></div>
       </div>
 
-      <Tweet />
+      <Tweet tweetData={[]} newTweetText={''} />
     </section>
   );
 }

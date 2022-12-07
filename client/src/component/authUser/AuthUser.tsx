@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 // import { useEffect } from "react";
 import backImg from '../../../src/images/backImage.png'
 import authLogo from '../../../src/images/nav__logo.svg'
@@ -6,8 +6,8 @@ import './AuthUser.css'
 import AuthRegisterPopup from "./AuthRegisterPopup/AuthRegisterPopup";
 import AuthLoginPopup from "./AuthLoginPopup/AuthLoginPopup";
 
-function AuthUser() {
-    const [isPopup, setIsPopup] = useState(false);
+const AuthUser: FC = () => {
+    const [isPopup, setIsPopup] = useState<any>(false);
 
     const handlePopupRegistrClick = () => {
         setIsPopup("popupRegistr");

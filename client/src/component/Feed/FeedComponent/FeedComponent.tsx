@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function FeedComponent(state) {
+const FeedComponent = (state: any) => {
   return (
     <>
       <div className="feed__tweet_avatar-wrapper">

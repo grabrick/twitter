@@ -1,9 +1,9 @@
 import React from "react";
 import Avatar from "../common/Avatar/Avatar";
 import { NavLink } from "react-router-dom";
-import MenuPopup from "../common/MenuPopupState/MenuPopupState";
+import {MenuPopupState} from "../common/MenuPopupState/MenuPopupState";
 
-function TweetComponent(state) {
+function TweetComponent(state: any) {
     const [count, setCount] = React.useState(6),
       [like, isLike] = React.useState(false),
       onLikeButtonClick = () => {
@@ -33,7 +33,7 @@ function TweetComponent(state) {
               </div>
             </div>
             <div className="tweet__header_more-popup_wrapper">
-              <MenuPopup />
+              <MenuPopupState />
             </div>
           </div>
         </div>

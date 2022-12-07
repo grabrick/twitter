@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
+import { newsItem } from "../../../../types/types";
 
-function NewsComponent(state) {
+const NewsComponent: FC<newsItem> = (state) => {
     return (
     <div className="News__popular-element">
         <div className="News__popular_element-wrapper">

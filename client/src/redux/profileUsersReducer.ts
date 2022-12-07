@@ -13,7 +13,8 @@ const initialState: IProfile = {
             location: 'London',
             hbInfo: 'Joined September 2011',
             following: 565,
-            followers: 72
+            followers: 72,
+            close: undefined
         }
     ]
 }

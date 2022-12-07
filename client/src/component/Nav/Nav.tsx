@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../images/nav__logo.svg";
 import "./Nav.css";
 import NavRender from "./NavRender/NavRender";
 
-function Nav() {
+const Nav: FC = () => {
   return (
     <section className="Nav">
       <div className="Nav__wrapper_main">
@@ -45,7 +45,7 @@ function Nav() {
           </div>
         </div>
 
-        <NavRender /> {/* Render маленького профиля */}
+        <NavRender name={""} photo={""} id={""} /> {/* Render маленького профиля */}
 
       </div>
     </section>

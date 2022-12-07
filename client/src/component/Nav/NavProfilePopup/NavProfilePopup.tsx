@@ -1,9 +1,11 @@
-import { React, useState } from "react";
+import { FC, useState } from "react";
+import { close } from "../../../types/types";
 import NavPopupRender from "../NavRender/NavPopupRender/NavPopupRender";
 import NavLogoutRender from "./NavProfileLogoutRender/NavLogoutRender";
 import './NavProfilePopup.css'
 
-function NavProfilePopup({close}) {
+
+const NavProfilePopup: FC<close> = ({close}: any) => {
     
     const [popup] = useState(false);
 
@@ -19,7 +21,7 @@ function NavProfilePopup({close}) {
           >
             <div className="nav__popup_container-wrapper">
               <div className="nav__popup_wrapp-fixed">
-                <NavPopupRender />
+                <NavPopupRender name={""} photo={""} id={""} />
               </div>
 
               <div className="nav__popup_wrapp-logout" onClick={() => {

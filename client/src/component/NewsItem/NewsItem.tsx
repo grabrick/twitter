@@ -1,11 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import '../NewsItem/News/News.css'
 import loupe from '../../images/loops.svg'
 import News from "./News/News";
-import { useSelector } from "react-redux";
+import { INews } from "../../types/types";
+import { useAppSelector } from "../../hooks/redux.hook";
 
-const NewsItem = () => {
-    const news = useSelector(state => state.news.newsData)
+const NewsItem: FC<INews> = () => {
+    const news = useAppSelector(state => state.news.newsData)
 
     const moreNews = () => {
         if (news.length >= 7) {
@@ -26,7 +27,7 @@ const NewsItem = () => {
         <div className="News__popular-info">
             <h1 className="News__popular-title">Trends for you</h1>
             <div className="News__popular-wrapper">
-                <News />
+                <News newsData={[]} />
             </div>
                 { moreNews() }
         </div>

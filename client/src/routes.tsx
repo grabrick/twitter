@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes, Navigate } from 'react-router-dom';
-import FeedHome from '../src/component/Pages/FeedHome/FeedHome';
-import FeedProfile from '../src/component/Pages/FeedProfile/FeedProfile';
-import FeedMessage from '../src/component/Pages/FeedMessage/FeedMessage'
+import FeedHome from './component/Pages/FeedHome/FeedHome';
+import FeedProfile from './component/Pages/FeedProfile/FeedProfile';
+import FeedMessage from './component/Pages/FeedMessage/FeedMessage'
 // import ProfileSwitcher from '../src/component/Pages/FeedProfile/ProfileSwitcher/ProfileSwitcher';
-import FeedFriends from '../src/component/Pages/FeedFriends/FeedFriends';
-import FeedAuth from '../src/component/Pages/FeedAuth/FeedAuth'
+import FeedFriends from './component/Pages/FeedFriends/FeedFriends';
+import FeedAuth from './component/Pages/FeedAuth/FeedAuth'
 
-function useRoutes(isAuthticated) {
+function useRoutes(isAuthticated: boolean) {
     if(isAuthticated) {
         return (
           <div className="page">
