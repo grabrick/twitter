@@ -3,7 +3,7 @@ import './AuthLoginPopup.css'
 import {AuthContext} from "../../../context/AuthContext";
 import { useHttp } from "../../../hooks/http.hook";
 
-function AuthLoginPopup({close}) {
+const AuthLoginPopup = ({close}) => {
     const [popup] = useState(false);
     const auth = useContext(AuthContext)
     const {loading, request} = useHttp()

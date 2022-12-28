@@ -13,7 +13,7 @@ function FeedHome() {
       </>
       <>
         <Feed />
-        <NewsItem />
+        <NewsItem newsData={[]} />
       </>
     </>
   );

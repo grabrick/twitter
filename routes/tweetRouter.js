@@ -1,11 +1,11 @@
 const {Router} = require('express')
 const router = Router()
-const controller = require('./syncController/syncController')
+const controller = require('./tweetController/tweetController')
 
 router.get(
-    '/profile',
+    '/Tweet',
     
-    controller.sync
+    controller.tweet
 )
 
 module.exports = router

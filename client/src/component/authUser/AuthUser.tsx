@@ -7,7 +7,7 @@ import AuthRegisterPopup from "./AuthRegisterPopup/AuthRegisterPopup";
 import AuthLoginPopup from "./AuthLoginPopup/AuthLoginPopup";
 
 const AuthUser: FC = () => {
-    const [isPopup, setIsPopup] = useState<any>(false);
+    const [isPopup, setIsPopup] = useState<boolean | string>(false);
 
     const handlePopupRegistrClick = () => {
         setIsPopup("popupRegistr");

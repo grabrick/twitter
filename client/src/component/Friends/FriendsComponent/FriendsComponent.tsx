@@ -19,7 +19,7 @@ function FriendsComponent(state: any) {
   const unfollow = "Unfollow";
 
   const getUsers = () => {
-    axios.get('/api/edit/profile')
+    axios.get('/api/auth/login')
       .then((items) => {
         debugger
         console.log('data has been received', items.data)

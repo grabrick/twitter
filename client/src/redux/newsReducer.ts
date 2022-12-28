@@ -32,11 +32,6 @@ const initialState: INews = {
             subtitle: 'Lamborghini',
             tags: 29
         },
-        {
-            title: 'Trending in cars',
-            subtitle: 'Lamborghini',
-            tags: 29
-        },
     ]
 }
 

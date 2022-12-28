@@ -7,19 +7,19 @@ import { useAppSelector } from "../../../hooks/redux.hook";
 
 
 const ProfilePopup: FC<close> = ({ close }: any) => {
-  const photo = useAppSelector((state) => state.tweet.tweetData);
+  const photo = useAppSelector(state => state.profileUsers.users)
   const [popup] = useState(false);
 
   const inactive = "popup";
   const active = "popup_opened";
 
-  const Avatar = photo.map((logo) => {
+  const Avatar = photo.map((i: {photo: string | undefined}) => {
     return (
       <>
         <div className="popup__close_btn">
           <img src={Close} alt="" />
         </div>
-        <img src={logo.avatar} id="popup__photo" alt="" />
+        <img src={i.photo} id="popup__photo" alt="" className="avatar" />
       </>
     );
   });
@@ -61,7 +61,9 @@ const ProfilePopup: FC<close> = ({ close }: any) => {
                         alt=""
                       />
                     </div>
-                    <div className="popup__photo_wrapp">{Avatar}</div>
+                    <div className="popup__photo_wrapp">
+                      {Avatar}
+                    </div>
                   </div>
                 </div>
                 <div className="text-field2 text-field_floating-2 auth__main_input-email_wrapper">

@@ -21,6 +21,7 @@ p {
 
 .avatar {
     cursor: pointer;
+    object-fit: cover;
 }
 
 .Authpage {

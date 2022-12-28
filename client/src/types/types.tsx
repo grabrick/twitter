@@ -7,14 +7,12 @@ export type close = {
     close: () => void
 }
 
-
-
 export type TweetItem = {
     avatar: string,
     name: string,
-    id: string,
+    _id: string,
     text: string,
-    image: string
+    image?: string
 }
 
 export type CatalogItem = {

@@ -14,6 +14,7 @@ const Feed: FC = () => {
   const newTweetText = useAppSelector(state => state.tweet.newTweetText);
   // const newTweetImage = useSelector(state => state.tweet.newTweetText)
 
+
   let addPost = () => {
     dispatch(addPostCreator());
   };

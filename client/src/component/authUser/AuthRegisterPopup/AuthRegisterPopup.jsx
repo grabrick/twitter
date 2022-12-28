@@ -9,7 +9,7 @@ import { useHttp } from "../../../hooks/http.hook";
 //   password: string,
 // }
 
-const AuthRegisterPopup = close => {
+const AuthRegisterPopup = ({close}) => {
     const [popup] = useState(false);
     const {loading, request} = useHttp()
     const [form, setForm] = useState({

@@ -10,7 +10,7 @@ const Pagination: FC = () => {
     const users = useAppSelector((state) => state.friends.friendsList);
     const currentPage = useAppSelector((state) => state.friends.currentPage)
     const totalUsersCount = useAppSelector((state) => state.friends.totalUsersCount);
-    const pagesSize = useAppSelector(state => state.friends.pagesSize);
+    const pagesSize = useAppSelector((state) => state.friends.pagesSize);
         
 
     const onChangePage = (pageNumber: number) => {

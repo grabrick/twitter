@@ -1,32 +1,29 @@
-import { ITweet } from "../types/types";
+import { ITweet, TweetItem } from "../types/types";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_TWEET_TEXT = "UPDATE-NEW-TWEET-TEXT";
 const DELETE_TWEET = "DELETE-TWEET";
+const GET_TWEETS = "GET-TWEETS"
 
-const initialState: ITweet = {
-  tweetData: [
-    {
-      avatar: 'https://sun9-32.userapi.com/impg/lUScM_MAg076fCAQbxVP9BCEMHC8UBHHbcpkBA/hn7xdLYNgdE.jpg?size=612x873&quality=95&sign=5daf20cf12dbb91ae2715e8fe982fdfe&type=album',
-      image: 'https://i.pinimg.com/564x/af/7a/1a/af7a1ac8729932ec8f8dccfcb3288fa0.jpg',
-      id: '@johndue',
-      name: 'Devon Lane',
-      text: 'Tom is in a big hurry.'
-    }
-  ],
-  newTweetText: ''
+const initialState = {
+  tweetData: [],
+  newTweetText: "",
 };
 
 const tweetReducer = (state = initialState, action: any) => {
   switch (action.type) {
+    case GET_TWEETS:
+    return {
+      ...state, tweetData: action.tweetData
+    }
     case ADD_POST:
       let newPost = {
         id: "@ggrrht",
         name: "Kirill",
         text: state.newTweetText,
         avatar: '',
-        image: ''
+        image: "",
       };
 
       // state.tweetData.push(newPost);
@@ -35,7 +32,7 @@ const tweetReducer = (state = initialState, action: any) => {
 
       return {
         ...state,
-        tweetData: [...state.tweetData, newPost],
+        tweetData: [newPost, ...state.tweetData],
         newTweetText: "",
       };
     case UPDATE_NEW_TWEET_TEXT:
@@ -60,5 +57,9 @@ export const updateTweetCreator = (text: PayloadAction<string>) => ({
   type: UPDATE_NEW_TWEET_TEXT,
   newText: text,
 });
+export const getTweets = (tweetData: TweetItem) => ({
+  type: GET_TWEETS,
+  tweetData: tweetData
+})
 
 export default tweetReducer;

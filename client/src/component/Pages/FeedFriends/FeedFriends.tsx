@@ -12,7 +12,7 @@ function FeedFriends() {
         </>
         <>
           <Friends />
-          <NewsItem />
+          <NewsItem newsData={[]} />
         </>
       </>
     );
