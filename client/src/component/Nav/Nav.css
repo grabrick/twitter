@@ -7,6 +7,18 @@
     margin-left: 150px;
 }
 
+/* .nav__inactive {
+    background-color: white;
+} */
+
+.nav .active {
+    background-color: #EBEEF0;
+}
+
+.nav__active {
+    background-color: #EBEEF0;
+}
+
 .Nav__wrapper {
     display: flex;
     flex-direction: column;

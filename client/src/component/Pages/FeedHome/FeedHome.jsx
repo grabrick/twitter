@@ -5,7 +5,7 @@ import Feed from '../../Feed/Feed'
 import NewsItem from '../../NewsItem/NewsItem';
 
 
-function FeedHome() {
+const FeedHome = () => {
   return (
     <>
       <>

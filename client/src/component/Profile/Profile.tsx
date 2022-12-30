@@ -19,7 +19,7 @@ const Profile: FC<close> = () => {
   const [show, setShow] = React.useState<string>("Tweets")
 
   const handleTweetsClick = () => {
-      setShow("Tweets");
+    setShow("Tweets");
   }
 
   const handleRepliesClick = () => {

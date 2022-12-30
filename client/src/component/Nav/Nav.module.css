@@ -1,0 +1,7 @@
+.item a {
+    background-color: white;
+}
+
+.item a.active {
+    background-color: #EBEEF0;
+}
