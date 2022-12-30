@@ -7,7 +7,7 @@ function FeedMessage() {
     return (
       <>
         <>
-          <Nav />
+          <Nav classHome={`${"nav__inactive"}`} classMessage={`${"nav__active"}`} classProfile={`${"nav__inactive"}`} classFriends={`${"nav__inactive"}`} />
         </>
         <>
           <MessagesCatalog />

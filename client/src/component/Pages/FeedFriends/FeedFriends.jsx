@@ -8,7 +8,7 @@ function FeedFriends() {
     return (
       <>
         <>
-          <Nav />
+          <Nav classHome={`${"nav__inactive"}`} classMessage={`${"nav__inactive"}`} classProfile={`${"nav__inactive"}`} classFriends={`${"nav__active"}`} />
         </>
         <>
           <Friends />

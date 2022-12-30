@@ -7,7 +7,7 @@ function FeedProfile() {
     return (
       <>
         <>
-          <Nav />
+          <Nav classHome={`${"nav__inactive"}`} classMessage={`${"nav__inactive"}`} classProfile={`${"nav__active"}`} classFriends={`${"nav__inactive"}`} />
         </>
         <>
           <Profile />

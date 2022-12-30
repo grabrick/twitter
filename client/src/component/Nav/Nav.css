@@ -7,16 +7,15 @@
     margin-left: 150px;
 }
 
-/* .nav__inactive {
-    background-color: white;
-} */
-
-.nav .active {
-    background-color: #EBEEF0;
+.nav__inactive {
+    background-color: none;
 }
 
 .nav__active {
-    background-color: #EBEEF0;
+    width: 200px;
+    border-radius: 20px;
+    list-style: none;
+    background-image: linear-gradient(to right, #EBEEF0, #ffffff);
 }
 
 .Nav__wrapper {
@@ -57,13 +56,14 @@
 
 .Nav__catalog_btn {
     width: 200px;
-    border-radius: 50px;
+    border-radius: 20px;
     list-style: none;
 }
 
 .Nav__catalog_btn:hover {
     cursor: pointer;
-    background-color: #EBEEF0;
+    /* background-color: #EBEEF0; */
+    background-image: linear-gradient(to right, #EBEEF0, #ffffff);
     transition: linear 0.3s;
 }
 

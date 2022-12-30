@@ -4,28 +4,30 @@ import Logo from "../../images/nav__logo.svg";
 import "./Nav.css";
 import NavRender from "./NavRender/NavRender";
 
-const Nav: FC = () => {
-  const [show, setShow] = React.useState<string>("Home")
+const Nav: FC = (props: any) => {
+  // const [show, setShow] = React.useState<string>("Home")
 
-  const handleHomeClick = () => {
-    setShow("Home");
-  }
+  // const handleHomeClick = () => {
+  //   setShow("Home");
+  // }
 
-  const handleMessageClick = () => {
-    setShow("Message");
-  }
+  // const handleMessageClick = () => {
+  //   setShow("Message");
+  // }
 
-  const handleProfileClick = () => {
-    setShow("Profile");
-  }
+  // const handleProfileClick = () => {
+  //   setShow("Profile");
+  // }
 
-  const handleFriendsClick = () => {
-    setShow("Friends");
-  }
+  // const handleFriendsClick = () => {
+  //   setShow("Friends");
+  // }
 
-  const activeColor = "nav__active";
+  // const activeColor = "nav__active";
 
-  const inactiveColor = "nav__inactive";
+  // const inactiveColor = "nav__inactive";
+
+  // className={show === "Home" ? activeColor : inactiveColor} onClick={handleHomeClick}
 
   return (
     <section className="Nav">
@@ -37,7 +39,7 @@ const Nav: FC = () => {
           <div className="Nav__catalog">
             <ul className="Nav__catalog_wrapper">
               <div className="Nav__catalog_btn">
-                <div className={show === "Home" ? activeColor : inactiveColor} onClick={handleHomeClick}>
+                <div className={props.classHome}>
                   <NavLink to="/Home" className="Nav__catalog-link_swipe">
                     <div className="Nav__catalog_image-home" />
                     <li className="Nav__catalog_link">Home</li>
@@ -46,8 +48,8 @@ const Nav: FC = () => {
               </div>
 
               <div className="Nav__catalog_btn">
-                <div className={show === "Message" ? activeColor : inactiveColor} onClick={handleMessageClick}>
-                  <NavLink to="/Message" className={`Nav__catalog-link_swipe`}>
+                <div className={props.classMessage}>
+                  <NavLink to="/Message" className="Nav__catalog-link_swipe">
                     <div className="Nav__catalog_image-messages" />
                     <li className="Nav__catalog_link">Messages</li>
                   </NavLink>
@@ -55,8 +57,8 @@ const Nav: FC = () => {
               </div>
 
               <div className="Nav__catalog_btn">
-                <div className={show === "Profile" ? activeColor : inactiveColor} onClick={handleProfileClick}>
-                  <NavLink to="/Profile" className={`Nav__catalog-link_swipe`}>
+                <div className={props.classProfile}>
+                  <NavLink to="/Profile" className="Nav__catalog-link_swipe">
                     <div className="Nav__catalog_image-profile" />
                     <li className="Nav__catalog_link">Profile</li>
                   </NavLink>
@@ -64,8 +66,8 @@ const Nav: FC = () => {
               </div>
 
               <div className="Nav__catalog_btn">
-                <div className={show === "Friends" ? activeColor : inactiveColor} onClick={handleFriendsClick}>
-                  <NavLink to="/Friends" className={`Nav__catalog-link_swipe`}>
+                <div className={props.classFriends}>
+                  <NavLink to="/Friends" className="Nav__catalog-link_swipe">
                     <div className="Nav__catalog_image-friends" />
                     <li className="Nav__catalog_link">Friends</li>
                   </NavLink>
