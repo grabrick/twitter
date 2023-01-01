@@ -7,6 +7,19 @@
     margin-left: 150px;
 }
 
+@media screen and (min-width: 1439px) {
+    .Nav {
+        margin-left: 85px;
+        height: 1080px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .Nav {
+        margin-left: 330px;
+    }
+}
+
 .nav__inactive {
     background-color: none;
 }

@@ -1,15 +1,23 @@
 .feed {
-    border-left: 0.5px solid #EBEEF0;
-    border-right: 0.5px solid #EBEEF0;
+    /* border-left: 0.5px solid #EBEEF0;
+    border-right: 0.5px solid #EBEEF0; */
+    border-left: var(--border-color);
+    border-right: var(--border-color);
     margin-left: 209px;
     min-width: 600px;
+}
+
+@media screen and (max-width: 1920px) {
+    .feed {
+       height: 1080px;
+    }
 }
 
 .feed__header {
     display: flex;
     justify-content: space-between;
-    border-top: 0.5px solid #EBEEF0;
-    border-bottom: 0.5px solid #EBEEF0;
+    border-top: var(--border-color);
+    border-bottom: var(--border-color);
 }
 
 .feed__name {
@@ -111,7 +119,7 @@
     margin: 0;
     height: 10px;
     background-color: #F7F9FA;
-    border: 0.5px solid #EBEEF0;
+    border: var(--border-color);
 }
 
 /* Button */
@@ -122,6 +130,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .button-img input[type="button"] {
     border: none;
     background-color: #ffffff;
@@ -131,6 +140,7 @@
     height: 24px;
     cursor: pointer;
 }
+
 .button-img input[type="file"] { 
     width: 150px; 
     position: absolute;

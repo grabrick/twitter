@@ -1,7 +1,25 @@
 .messages__main {
     margin: 0;
     min-width: 600px;
-    border-right: 0.5px solid #EBEEF0;
+    border-right: var(--border-color);
+}
+
+@media screen and (min-width: 1439px) {
+    .messages__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .messages__main_input {
+        margin-bottom: 10px;
+    }
+
+    .messages__main_window {
+        min-height: 955px;
+        background-color: black;
+    }
+
 }
 
 .messages__main_header-picture {
@@ -11,7 +29,7 @@
 }
 
 .messages__main_header {
-    border-bottom: 0.5px solid #EBEEF0;
+    border-bottom: var(--border-color);
     padding: 5px 10px 0 10px;
     display: flex;
     align-items: center;
@@ -43,7 +61,7 @@
 .messages__main_input {
     display: flex;
     align-items: center;
-    border-top: 0.5px solid #EBEEF0;
+    border-top: var(--border-color);
 }
 
 .messages__text_input {

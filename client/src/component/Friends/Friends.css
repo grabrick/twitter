@@ -1,9 +1,30 @@
 .friends__main_window {
-    border-left: 0.5px solid #EBEEF0;
-    border-right: 0.5px solid #EBEEF0;
+    border-left: var(--border-color);
+    border-right: var(--border-color);
     display: flex;
     margin-left: 200px;
     min-width: 580px;
+}
+
+@media screen and (min-width: 1439px) {
+    .friends__main_window {
+        height: 1080px;
+    }
+
+    .friends__item_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .friends__main_wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1439px) {
+    .friends__main_page {
+        margin-top: 200px;
+    }
 }
 
 .friends__item {

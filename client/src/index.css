@@ -13,7 +13,12 @@ code {
 }
 
 *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* =========Color======== */
+  --border-color: 0.5px solid #EBEEF0;
+}
