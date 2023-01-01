@@ -17,13 +17,15 @@
     }
 
     .friends__main_wrapper {
+        /* display: flex;
         flex-direction: column;
+        justify-content: space-between; */
     }
 }
 
 @media screen and (min-width: 1439px) {
-    .friends__main_page {
-        margin-top: 200px;
+    .friends__main_pages {
+        margin-top: 370px;
     }
 }
 
@@ -112,9 +114,9 @@
 
 .friends__main_wrapper {
     min-width: 600px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 #number__page {
