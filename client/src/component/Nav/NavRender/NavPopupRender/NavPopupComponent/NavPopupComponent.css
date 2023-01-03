@@ -9,12 +9,6 @@
     border-radius: 100px;
 }
 
-.Nav__wrapper_main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .Nav__user_popup-photo {
     width: 45px;
     height: 45px;
