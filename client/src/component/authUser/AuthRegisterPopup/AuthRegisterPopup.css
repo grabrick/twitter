@@ -45,9 +45,9 @@
     margin-bottom: 10px;
 }
 .popup__button_register-save:hover {
-    border: 2px solid #126FA4;
+    border: 2px solid #1D9BF0;
     transition: linear 0.3s;
-    color: #FFFFFF;
+    color: #1D9BF0;
 }
 
 .auth__main_reg-text {

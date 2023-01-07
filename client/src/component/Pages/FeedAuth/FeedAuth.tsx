@@ -1,5 +1,5 @@
 import React from 'react'
-import AuthUser from '../../AuthUser/AuthUser'
+import AuthUser from '../../authUser/AuthUser'
 
 
 function FeedAuth() {
