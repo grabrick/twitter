@@ -3,9 +3,22 @@
     border-left: var(--border-color);
     border-right: var(--border-color);
     margin-left: 198px;
+    height: 721px;
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-height: 722px) {
+    .profile {
+        height: 800px;
+    }
+}
+
+@media screen and (min-height: 800px) {
+    .profile {
+        height: 900px;
+    }
+}
+
+@media screen and (min-height: 999px) {
     .profile {
         height: 1080px;
     }
