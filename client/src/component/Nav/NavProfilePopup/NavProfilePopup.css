@@ -4,19 +4,12 @@
     height: 100%;
     /* background-color: rgba(0, 0, 0, .5); */
     top: 220px;
-    right: 500px;
+    right: 520px;
     display: flex;
     justify-content: center;
     align-items: center;
     visibility: visible;
     transition: opacity 500ms linear, visibility 0.5s linear;
-}
-
-@media screen and (max-width: 1920px) {
-    .nav__popup {
-        top: 410px;
-        right: 530px;
-    }
 }
 
 .nav__popup_opened {
@@ -47,4 +40,32 @@
 .nav__popup_wrapp-logout:hover {
     transition: linear 0.3s;
     background-color: rgb(208, 208, 208);
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__popup {
+        top: 271px;
+        right: 402px;
+    }
+}
+
+@media screen and (min-width: 1439px) {
+    .nav__popup {
+        top: 234px;
+        right: 497px;
+    }
+}
+
+@media screen and (min-width: 1526px) {
+    .nav__popup {
+        top: 234px;
+        right: 497px;
+    }
+}
+
+@media screen and (min-width: 1919px) {
+    .nav__popup {
+        top: 406px;
+        right: 534px;
+    }
 }

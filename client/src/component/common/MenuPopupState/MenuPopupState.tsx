@@ -7,13 +7,33 @@ import More from "../../../images/more-line.svg";
 import SentimentDissatisfiedOutlinedIcon from '@mui/icons-material/SentimentDissatisfiedOutlined';
 import './MenuPopupState.css'
 import { useDispatch } from "react-redux";
-import {deleteTweetCreator} from '../../../redux/tweetReducer'
+import { getTweets } from '../../../redux/tweetReducer'
+import axios from "axios";
+import { TweetItem } from "../../../types/types";
 
-export const MenuPopupState = () => {
+export const MenuPopupState = (id: any) => {
   const dispatch = useDispatch()
+  const getTweet = (tweet: TweetItem) => {
+    dispatch(getTweets(tweet))
+  }
 
   const onClickDeleteTweet = (id: any) => {
-    dispatch(deleteTweetCreator(id))
+    try {
+      axios.delete(`http://localhost:3000/api/post/delete/${id.id}`)
+        .then((item) => {
+          console.log(item)
+          // updateState(item)
+        })
+    } catch (e) {
+      console.log({ message: e })
+    } finally {
+      axios.get('http://localhost:3000/api/posts')
+        .then((items) => {
+          getTweet(items.data.candidate)
+        }).catch((e) => {
+          console.log(e)
+        })
+    }
   }
   return (
     <PopupState variant="popover" popupId="demo-popup-menu">
@@ -24,7 +44,7 @@ export const MenuPopupState = () => {
           </Button>
           <Menu {...bindMenu(popupState)}>
             <MenuItem onClick={popupState.close}>
-              <div className="fgfg" onClick={(id) => {onClickDeleteTweet(id)}}>
+              <div className="fgfg" onClick={() => { onClickDeleteTweet(id) }}>
                 <SentimentDissatisfiedOutlinedIcon />
                 <p className="popup__title_more">
                   Not interested in this tweet

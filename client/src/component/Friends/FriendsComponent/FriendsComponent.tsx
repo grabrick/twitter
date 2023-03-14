@@ -18,17 +18,6 @@ function FriendsComponent(state: any) {
   const follow = "Follow";
   const unfollow = "Unfollow";
 
-  const getUsers = () => {
-    axios.get('/api/auth/login')
-      .then((items) => {
-        debugger
-        console.log('data has been received', items.data)
-      })
-      .catch(() => {
-        console.log('error data')
-      })
-  }
-
   return (
     <>
       <div className="friends__item">
@@ -49,7 +38,7 @@ function FriendsComponent(state: any) {
               <span className="friends__item_name-id">{state.userId}</span>
             </h4>
           </div>
-          <button className="friends__item_btn" onClick={getUsers}>
+          <button className="friends__item_btn">
             {state.followed === false ? follow : unfollow}
           </button>
         </div>

@@ -41,7 +41,7 @@ const tweetReducer = (state = initialState, action: any) => {
 
     case DELETE_TWEET:
       return {
-        ...state,
+        ...state, tweetData: action.tweetData
       };
     default:
       return state;

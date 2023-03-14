@@ -4,7 +4,6 @@ class tweetController {
     async tweet(req, res) {
         try {
             // const candidate = await Profile.findOne({ name })
-            
             const candidate = await Tweet.find({  })
             res.json({candidate})
         } catch (e) {

@@ -15,7 +15,7 @@ const FeedRender: FC = () => {
         <>
             {feedProfileElement}
         </>
-    );
+    );  
 }
 
 export default FeedRender;

@@ -1,9 +1,9 @@
 const {Router} = require('express')
 const router = Router()
-const controller = require('./tweetController/tweetController')
+const controller = require('./postController/postController')
 
 router.get(
-    '/Tweet',
+    '/posts',
     
     controller.tweet
 )

@@ -24,8 +24,7 @@ function TweetComponent(state: any) {
         <div className="tweet__header-wrapp">
           <div className="tweet__header_element">
             <NavLink to="/Profile">
-              {/* <Avatar /> unknown error */}
-              <img src={state.avatar} alt="" className="tweet__header_img avatar" />
+              <img src={state.avatar} alt="" className="tweet__header_img" />
             </NavLink>
             <div className="tweet__header_element-text">
               <p className="tweet__header_element-title">
@@ -37,7 +36,7 @@ function TweetComponent(state: any) {
             </div>
           </div>
           <div className="tweet__header_more-popup_wrapper">
-            <MenuPopupState />
+            <MenuPopupState id={id} />
           </div>
         </div>
       </div>

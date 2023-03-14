@@ -228,24 +228,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* text field */
 .text-field2 {
     margin-bottom: 1rem;
@@ -349,4 +331,10 @@
 .text__field_input-profile {
     width: 541px;
 
+}
+
+@media screen and (min-height: 1079px) {
+    .popup__wrapp_fixed {
+        top: 340px;
+    }
 }

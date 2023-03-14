@@ -28,7 +28,7 @@ const AuthRegisterPopup = ({close}) => {
             const data = await request("/api/auth/register", "POST", {...form})
             console.log("Data", data);
         } catch (e) {
-            
+            console.log(e)
         }
     }
 
