@@ -6,7 +6,7 @@ import { INews } from "../../../types/types";
  
 const News: FC<INews> = () => {
     const news = useAppSelector(state => state.news.newsData)
-    let newsElement = news.map(news => <NewsComponent title={news.title} subtitle={news.subtitle} tags={news.tags}/>)
+    let newsElement = news.map(news => <NewsComponent key={news.tags} title={news.title} subtitle={news.subtitle} tags={news.tags}/>)
 
     return(
         <>

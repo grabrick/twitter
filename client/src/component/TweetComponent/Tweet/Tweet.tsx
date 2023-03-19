@@ -14,17 +14,16 @@ const Tweet: FC<ITweet> = () => {
   }
   
   useEffect(() => {
-    axios.get('http://localhost:3000/api/posts')
-    .then((items) => {
-      getTweet(items.data.candidate)
-    }).catch((e) => {
-      console.log(e)
-    })
+      axios.get('http://localhost:3000/api/posts')
+      .then((items) => {
+        getTweet(items.data.candidate)
+      }).catch((e) => {
+        console.log(e)
+      })
   }, [])
-  
 
   const tweetElement = tweet.map((t: { avatar: string; name: string; _id: string; text: string; image: string; }) =>
-    <TweetComponent avatar={t.avatar} name={t.name} id={t._id} lastTime='20s' text={t.text} tweetImage={t.image} />)
+    <TweetComponent key={t._id} avatar={t.avatar} name={t.name} id={t._id} lastTime='20s' text={t.text} tweetImage={t.image} />)
 
   return (
     <>

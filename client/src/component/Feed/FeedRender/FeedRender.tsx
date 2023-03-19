@@ -5,8 +5,9 @@ import FeedComponent from "../FeedComponent/FeedComponent";
 
 const FeedRender: FC = () => {
     const feedProfile = useAppSelector(state => state.profileUsers.users)
-    const feedProfileElement = feedProfile.map((feedProfile: { photo: string }) => (
-      <FeedComponent 
+    const feedProfileElement = feedProfile.map((feedProfile: { id: number, photo: string }) => (
+      <FeedComponent
+        key={feedProfile.id}
         photo={feedProfile.photo}
       />
     ));

@@ -9,8 +9,9 @@ class deleteController {
                 return res.status(400).json({message: "ID not found"})
             }
     
-            const dl = await Tweet.findOneAndDelete(id)
-            return res.json(dl)
+            // const findId = await Tweet.findById(id)
+            const deleteElement = await Tweet.findByIdAndDelete(id)
+            return res.json(deleteElement)
         } catch (e) {
             res.status(500).json(e)
         }   

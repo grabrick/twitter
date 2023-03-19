@@ -8,7 +8,7 @@ import NavProfilePopup from "../NavProfilePopup/NavProfilePopup";
 
 const NavComponent: FC<SmallPopup> = (state) => {
   const Images = useAppSelector(state => state.profileUsers.users)
-    .map((a: { photo: string | undefined; }) => <img src={a.photo} alt="" className="Nav__user_photo avatar" />)
+    .map((a: { id: number, photo: string | undefined; }) => <img key={a.id} src={a.photo} alt="" className="Nav__user_photo avatar" />)
   
   
   const [isPopup, setIsPopup] = useState(false);
