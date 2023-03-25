@@ -22,5 +22,10 @@ router.post(
     controller.login
 )
 
+router.get(
+    '/getUsers/:name',
+    controller.getData
+)
+
 
 module.exports = router

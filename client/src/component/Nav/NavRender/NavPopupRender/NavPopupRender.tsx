@@ -10,6 +10,7 @@ const NavPopupRender: FC<SmallPopup> = () => {
   const profilElement = profile.map((profileRender: { name: string, photo: string, id: string }) => (
     <>
       <NavPopupComponent
+        key={profileRender.id}
         name={profileRender.name}
         photo={profileRender.photo}
         id={profileRender.id}

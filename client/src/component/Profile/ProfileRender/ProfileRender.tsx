@@ -9,7 +9,8 @@ const ProfileRender: FC<IProfile> = () => {
   const profileElement = Profile.map((usersProfile:
     { name: string, id: string, photo: string, backImage: string, bio: string, job: string, location: string, hbInfo: string, following: number, followers: number, }
   ) => (
-    <ProfileComponent      
+    <ProfileComponent
+      key={usersProfile.id}  
       name={usersProfile.name}
       id={usersProfile.id}
       photo={usersProfile.photo}

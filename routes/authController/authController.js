@@ -75,6 +75,22 @@ class authController {
         }
     }
 
+    async getData(req, res) {
+        try {
+            
+            const {name} = req.params
+
+            const getUser = await User.findOne({ name })
+            if(!getUser) {
+               return res.status(400).json({message: name})
+            }
+
+            return res.json(getUser)
+        } catch (e) {
+            res.status(500).json(e)
+        }
+    }
+
 }
 
 module.exports = new authController()

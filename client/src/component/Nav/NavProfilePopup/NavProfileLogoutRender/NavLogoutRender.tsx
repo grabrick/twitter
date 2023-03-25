@@ -10,7 +10,7 @@ const NavLogoutRender: FC = () => {
 
     const userId = useAppSelector(state => state.profileUsers.users)
         .map((id: { id: string }) => {
-            return <span>@{id.id.slice(0, 15)}</span>
+            return <span key={id.id}>@{id.id.slice(0, 15)}</span>
         })
     return (
         <p>Log out{userId}</p>

@@ -42,13 +42,13 @@ export type ProfileItem = {
     name: string,
     id: string,
     photo: string,
-    backImage: string,
-    job: string,
+    backImage?: string,
+    job?: string,
     bio: string,
-    location: string,
-    hbInfo: string,
-    following: number,
-    followers: number,
+    location?: string,
+    hbInfo?: string,
+    following?: number,
+    followers?: number,
     close?: close
 }
 

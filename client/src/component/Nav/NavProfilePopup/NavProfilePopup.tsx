@@ -27,6 +27,8 @@ const NavProfilePopup: FC<close> = ({close}: any) => {
               <div className="nav__popup_wrapp-logout" onClick={() => {
                 // localStorage.clear()
                 localStorage.removeItem('userData')
+                // eslint-disable-next-line no-restricted-globals
+                location.reload()
                 }}>
                     <NavLogoutRender />
               </div>

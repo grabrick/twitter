@@ -7,6 +7,7 @@ import Arrow from '../../images/arrow.svg';
 import ProfileRender from './ProfileRender/ProfileRender'
 import ProfilePopup from "./ProfilePopup/ProfilePopup";
 import { close } from "../../types/types";
+import { NavLink } from "react-router-dom";
 
 // import { useDispatch } from 'react-redux'
 // import * as axios from "axios";
@@ -45,7 +46,9 @@ const Profile: FC<close> = () => {
   return (
     <section className='profile'>
         <div className="profile__header">
-          <img src={Arrow} alt="arrow" className="profile__arrow" />
+          <NavLink to="/Home">
+            <img src={Arrow} alt="arrow" className="profile__arrow" />
+          </NavLink>
           
           <div className="profile__info">
             <p className="profile__name">Name</p>

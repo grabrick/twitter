@@ -58,7 +58,7 @@ const Pagination: FC = () => {
     return (
         <div className="friends__main_pages">
             {pages.map((p: any) => {
-              return <span className={currentPage === p ? activePage : ''} id="number__page" onClick={() => {onChangePage(p)}}>{p}</span>
+              return <span key={p} className={currentPage === p ? activePage : ''} id="number__page" onClick={() => {onChangePage(p)}}>{p}</span>
             })}
         </div>
     );

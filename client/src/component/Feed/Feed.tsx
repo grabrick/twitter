@@ -16,7 +16,9 @@ const Feed: FC = () => {
 
 
   let addPost = () => {
-    dispatch(addPostCreator());
+    // dispatch(addPostCreator());
+    console.log("fdf")
+    
   };
 
   let onPostChange = (e: any) => {
@@ -46,17 +48,17 @@ const Feed: FC = () => {
 
               <textarea className="feed__tweet_title textarea" placeholder="What’s happening?" onChange={onPostChange} value={newTweetText} />
             </div>
-            <div className="feed__tweet_wrapper-button">
-              <form className="feed__tweet-button">
+            <form className="feed__tweet_wrapper-button">
+              <div className="feed__tweet-button">
                 <div className="button-img">
                   <input type="button" />
                   <input className="feed__tweet_button-img" type="file" />
                 </div>
                 {/* <input className="feed__tweet_button-gif" />
                 <input className="feed__tweet_button-emoji" /> */}
-              </form>
+              </div>
               <button className="feed__tweet_button-tweet feed__tweet_text" onClick={addPost} >Tweet</button>
-            </div>
+            </form>
           </div>
         </div>
         <div className="feed__bar"></div>
